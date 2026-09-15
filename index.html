@@ -29,22 +29,65 @@
   <!-- Bagian main memuat konten utama halaman web -->
   <main>
 
-    <!-- Section 1: Tentang Saya -->
-    <!-- Menampilkan biodata diri, profil singkat, dan identitas akademik -->
-    <section id="tentang">
-      <h2>Tentang Saya</h2>
-      <p>
-        Saya adalah mahasiswa Program Studi Sarjana Sistem Informasi di Institut Teknologi Del yang memiliki minat mendalam pada pengembangan web <em>full-stack</em>. Berfokus pada perancangan antarmuka pengguna yang modern, responsif, dan aksesibel, serta pembangunan arsitektur <em>backend</em> dan basis data yang efisien dan terstruktur. Selalu antusias memadukan estetika visual antarmuka dengan performa sistem web yang andal.
-      </p>
+    <!-- Section 1: Tentang Saya (Profil Profesional & Identitas) -->
+    <section id="tentang" aria-label="Tentang Saya">
+      <!-- 1. Bagian Atas: Banner Tipis Polos & Avatar Inisial -->
+      <div class="profile-banner"></div>
 
-      <ul class="identitas-akademik">
-        <li><strong>Nama Lengkap:</strong> Michael Pratama Nasution</li>
-        <li><strong>NIM:</strong> 12S24003</li>
-        <li><strong>Institusi:</strong> Institut Teknologi Del</li>
-        <li><strong>Program Studi:</strong> S1 Sistem Informasi</li>
-        <li><strong>Lokasi:</strong> Sitoluama, Laguboti, Toba, Sumatera Utara</li>
-        <li><strong>Email:</strong> michael.nasution@del.ac.id</li>
-      </ul>
+      <div class="profile-header">
+        <div class="profile-avatar" aria-label="Avatar Inisial Profil Michael Pratama Nasution">MP</div>
+        <h2 class="profile-name">Michael Pratama Nasution</h2>
+        <p class="profile-role">Full-stack Web Developer</p>
+      </div>
+
+      <!-- 2. Bagian Bawah: Dua Kolom (Bio + Skill Pills di Kiri, Identitas di Kanan) -->
+      <div class="profile-body">
+        <!-- Kolom Kiri: Bio & Skill Badges -->
+        <div class="profile-bio-col">
+          <h3 class="about-title">Tentang Saya</h3>
+          <p>
+            Saya adalah mahasiswa Program Studi Sarjana Sistem Informasi di Institut Teknologi Del yang memiliki minat mendalam pada pengembangan web <em>full-stack</em>. Berfokus pada perancangan antarmuka pengguna yang modern, responsif, dan aksesibel, serta pembangunan arsitektur <em>backend</em> dan basis data yang efisien dan terstruktur. Selalu antusias memadukan estetika visual antarmuka dengan performa sistem web yang andal.
+          </p>
+
+          <!-- Pill Badges untuk Keahlian Utama -->
+          <div class="skill-pills" aria-label="Keahlian Utama">
+            <span class="skill-pill">Full-stack</span>
+            <span class="skill-pill">UI/UX</span>
+            <span class="skill-pill">Database</span>
+            <span class="skill-pill">PHP &amp; Laravel</span>
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">Node.js</span>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Daftar Identitas Vertikal Rapi -->
+        <div class="profile-info-col">
+          <ul class="identity-list">
+            <li class="identity-item">
+              <span class="identity-label">NIM</span>
+              <span class="identity-value">12S24003</span>
+            </li>
+            <li class="identity-item">
+              <span class="identity-label">Institusi</span>
+              <span class="identity-value">Institut Teknologi Del</span>
+            </li>
+            <li class="identity-item">
+              <span class="identity-label">Program Studi</span>
+              <span class="identity-value">S1 Sistem Informasi</span>
+            </li>
+            <li class="identity-item">
+              <span class="identity-label">Lokasi</span>
+              <span class="identity-value">Sitoluama, Laguboti, Toba</span>
+            </li>
+            <li class="identity-item">
+              <span class="identity-label">Email</span>
+              <span class="identity-value">
+                <a href="mailto:michael.nasution@del.ac.id">michael.nasution@del.ac.id</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Section 2: Portofolio Karya -->
