@@ -132,7 +132,80 @@
     <!-- Section 3: Kontak & Layanan -->
     <!-- Menampilkan formulir kontak/konsultasi layanan interaktif & accessible -->
     <section id="kontak">
-      <!-- Formulir interaktif dengan fieldset & legend akan diisi di tahap selanjutnya -->
+      <h2>Kontak &amp; Formulir Layanan</h2>
+      <p>
+        Silakan lengkapi formulir di bawah ini untuk mengajukan pertanyaan, konsultasi teknis, atau penawaran kolaborasi proyek web:
+      </p>
+
+      <form action="#" method="POST" class="contact-form">
+        <!-- Fieldset 1: Data Identitas Pengirim -->
+        <fieldset>
+          <legend>Data Identitas Diri</legend>
+
+          <div class="form-group">
+            <label for="nama">Nama Lengkap <span class="req">*</span></label>
+            <input type="text" id="nama" name="nama" required placeholder="Contoh: Michael Pratama Nasution">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Alamat Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="nama@domain.com" aria-describedby="email-help">
+            <small id="email-help">Email aktif untuk pengiriman balasan resmi.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="telepon">Nomor Telepon / WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="telepon" name="telepon" required placeholder="Contoh: 081234567890">
+          </div>
+        </fieldset>
+
+        <!-- Fieldset 2: Detail Permintaan & Pesan -->
+        <fieldset>
+          <legend>Detail Permintaan &amp; Pesan</legend>
+
+          <div class="form-group">
+            <label for="kategori">Topik / Kategori Layanan <span class="req">*</span></label>
+            <select id="kategori" name="kategori" required>
+              <option value="">-- Pilih Topik Layanan --</option>
+              <option value="frontend">Frontend Engineering &amp; UI/UX</option>
+              <option value="backend">Backend &amp; Cloud Architecture</option>
+              <option value="database">Database Design &amp; Optimization</option>
+              <option value="fullstack">Full-stack Web Development</option>
+              <option value="lainnya">Konsultasi Umum / Lainnya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="durasi">Estimasi Waktu Proyek (dalam pekan)</label>
+            <input type="number" id="durasi" name="durasi" min="1" max="52" placeholder="Contoh: 4">
+          </div>
+
+          <div class="form-group">
+            <fieldset class="sub-fieldset">
+              <legend>Jenis Kebutuhan <span class="req">*</span></legend>
+              <label for="tipe-konsultasi">
+                <input type="radio" id="tipe-konsultasi" name="tipe_layanan" value="konsultasi" required checked> Konsultasi Akademik / Teknis
+              </label>
+              <label for="tipe-kolaborasi">
+                <input type="radio" id="tipe-kolaborasi" name="tipe_layanan" value="kolaborasi"> Kolaborasi Proyek Web
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label for="pesan">Deskripsi Pesan / Kebutuhan <span class="req">*</span></label>
+            <textarea id="pesan" name="pesan" rows="4" required placeholder="Tuliskan rincian kebutuhan atau pertanyaan Anda di sini..."></textarea>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <label for="persetujuan">
+              <input type="checkbox" id="persetujuan" name="persetujuan" required> Saya mengonfirmasi data yang diisi sudah benar dan dapat digunakan untuk komunikasi profesional. <span class="req">*</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">Kirim Permintaan Konsultasi</button>
+      </form>
     </section>
 
   </main>
