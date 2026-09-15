@@ -6,4 +6,88 @@
    NIM         : 12S24003
    ========================================================================== */
 
-/* Styling akan diimplementasikan secara bertahap pada tahap styling */
+/* ==========================================================================
+   1. Universal CSS Reset
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. Variabel Desain & Palet Warna (Aturan Harmonisasi 60-30-10)
+   - 60% Warna Netral Dominan : Latar belakang halaman & permukaan card (#f8fafc, #ffffff)
+   - 30% Warna Teks & Struktur : Teks konten, subjudul, dan heading (#1e293b, #0f172a)
+   - 10% Warna Aksen          : Tombol aksi, tautan aktif, badge, hover state (#0284c7, #0369a1)
+   ========================================================================== */
+:root {
+  /* 60% - Warna Dominan Netral */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+
+  /* 30% - Warna Teks & Tipografi */
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-heading: #0f172a;
+
+  /* 10% - Warna Aksen Interaktif */
+  --color-accent: #0284c7;
+  --color-accent-hover: #0369a1;
+  --color-accent-subtle: #e0f2fe;
+  --color-accent-focus: rgba(2, 132, 199, 0.2);
+
+  /* Status Warna Tambahan */
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+
+  /* Tipografi Dasar */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --line-height-base: 1.6;
+}
+
+/* ==========================================================================
+   3. Tipografi Dasar & Pengaturan Elemen Dasar (Body & Headings)
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-main);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hierarki Heading Jelas (h1 > h2 > h3) */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem; /* 32px */
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+  letter-spacing: -0.3px;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.2rem; /* ~19px */
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
