@@ -7,7 +7,7 @@
    ========================================================================== */
 
 /* ==========================================================================
-   1. Universal CSS Reset
+   1. Universal CSS Reset & Box Sizing
    ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -17,14 +17,15 @@
 
 /* ==========================================================================
    2. Variabel Desain & Palet Warna (Aturan Harmonisasi 60-30-10)
-   - 60% Warna Netral Dominan : Latar belakang halaman & permukaan card (#f8fafc, #ffffff)
-   - 30% Warna Teks & Struktur : Teks konten, subjudul, dan heading (#1e293b, #0f172a)
-   - 10% Warna Aksen          : Tombol aksi, tautan aktif, badge, hover state (#0284c7, #0369a1)
+   - 60% Warna Netral Dominan : Latar belakang (#f8fafc) & permukaan (#ffffff)
+   - 30% Warna Teks & Struktur : Teks utama (#1e293b), heading (#0f172a), border (#e2e8f0)
+   - 10% Warna Aksen          : Tombol, tautan aktif, focus ring (#0284c7, #0369a1)
    ========================================================================== */
 :root {
-  /* 60% - Warna Dominan Netral */
+  /* 60% - Warna Netral Dominan */
   --color-bg: #f8fafc;
   --color-surface: #ffffff;
+  --color-surface-subtle: #f1f5f9;
   --color-border: #e2e8f0;
   --color-border-hover: #cbd5e1;
 
@@ -39,17 +40,25 @@
   --color-accent-subtle: #e0f2fe;
   --color-accent-focus: rgba(2, 132, 199, 0.2);
 
-  /* Status Warna Tambahan */
+  /* Status Warna */
   --color-success: #10b981;
   --color-danger: #ef4444;
 
   /* Tipografi Dasar */
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --line-height-base: 1.6;
+
+  /* Sudut Membulat & Bayangan (Border Radius & Shadow) */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================================================
-   3. Tipografi Dasar & Pengaturan Elemen Dasar (Body & Headings)
+   3. Tipografi Dasar & Elemen Global
    ========================================================================== */
 html {
   scroll-behavior: smooth;
@@ -64,7 +73,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hierarki Heading Jelas (h1 > h2 > h3) */
+/* Hierarki Heading */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   font-weight: 700;
@@ -72,22 +81,435 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2rem; /* 32px */
-  letter-spacing: -0.5px;
+  font-size: 1.5rem;
+  letter-spacing: -0.3px;
 }
 
 h2 {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.45rem;
   letter-spacing: -0.3px;
   margin-bottom: 0.75rem;
+  color: var(--color-heading);
+  border-left: 4px solid var(--color-accent);
+  padding-left: 0.75rem;
 }
 
 h3 {
-  font-size: 1.2rem; /* ~19px */
+  font-size: 1.15rem;
   margin-bottom: 0.5rem;
+  color: var(--color-heading);
 }
 
 p {
   margin-bottom: 1rem;
   color: var(--color-text-main);
+}
+
+/* ==========================================================================
+   4. Header & Navigasi Primer (Flexbox)
+   ========================================================================== */
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.header-brand h1 {
+  font-size: 1.35rem;
+  color: var(--color-heading);
+}
+
+.header-brand p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  outline: none;
+}
+
+/* ==========================================================================
+   5. Konten Utama (Main) & Card Section Style
+   ========================================================================== */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   6. Styling Lists (ul, ol, Identitas Akademik)
+   ========================================================================== */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
+  color: var(--color-text-main);
+  line-height: 1.55;
+}
+
+/* Identitas Akademik dalam Bentuk Kartu Grid Ringkas */
+.identitas-akademik {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.identitas-akademik li {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   7. Styling Tabel Semantik
+   ========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+caption {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-heading);
+  text-align: left;
+  padding: 0.5rem 0.25rem 0.75rem 0.25rem;
+  caption-side: top;
+}
+
+thead {
+  background-color: var(--color-surface-subtle);
+  border-bottom: 2px solid var(--color-border);
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+thead th {
+  font-weight: 700;
+  color: var(--color-heading);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+tfoot {
+  background-color: var(--color-surface-subtle);
+  font-weight: 700;
+  border-top: 2px solid var(--color-border);
+}
+
+tfoot th,
+tfoot td {
+  padding: 12px 14px;
+  color: var(--color-heading);
+}
+
+/* ==========================================================================
+   8. Layout Portofolio (CSS Grid untuk Artikel & Galeri Keahlian)
+   ========================================================================== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-detail,
+.skills-showcase {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-detail:hover,
+.skills-showcase:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+.project-features,
+.skills-list {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.skills-list li {
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   9. Formulir Interaktif & Aksesibilitas
+   ========================================================================== */
+.contact-form {
+  margin-top: 1.5rem;
+}
+
+fieldset {
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-surface);
+}
+
+legend {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding: 0 8px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.4rem;
+}
+
+.req {
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--color-text-main);
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border-hover);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3.5px var(--color-accent-focus);
+}
+
+small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+}
+
+.sub-fieldset {
+  border: 1px dashed var(--color-border-hover);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-subtle);
+  margin-bottom: 0;
+}
+
+.sub-fieldset legend {
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+}
+
+.sub-fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn-submit:hover,
+.btn-submit:focus-visible {
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.35);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   10. Aside & Footer
+   ========================================================================== */
+aside {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+aside:hover {
+  box-shadow: var(--shadow-md);
+}
+
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 0.4rem;
+  color: var(--color-text-muted);
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
 }
