@@ -4,6 +4,7 @@
    Praktikum   : Minggu 02 - HTML5, CSS3, & Perancangan Antarmuka Web Modern
    Nama        : Michael Pratama Nasution
    NIM         : 12S24003
+   Standar     : WCAG 2.2 Level AA Accessibility & Responsive Web Design
    ========================================================================== */
 
 /* ==========================================================================
@@ -19,7 +20,7 @@
    2. Variabel Desain & Palet Warna (Aturan Harmonisasi 60-30-10)
    - 60% Warna Netral Dominan : Latar belakang (#f8fafc) & permukaan (#ffffff)
    - 30% Warna Teks & Struktur : Teks utama (#1e293b), heading (#0f172a), border (#e2e8f0)
-   - 10% Warna Aksen          : Tombol, tautan aktif, focus ring (#0284c7, #0369a1)
+   - 10% Warna Aksen          : Tombol aksi, tautan aktif, focus ring (#0284c7, #0369a1)
    ========================================================================== */
 :root {
   /* 60% - Warna Netral Dominan */
@@ -29,26 +30,26 @@
   --color-border: #e2e8f0;
   --color-border-hover: #cbd5e1;
 
-  /* 30% - Warna Teks & Tipografi */
+  /* 30% - Warna Teks & Tipografi (Kontras Tinggi Memenuhi WCAG 2.2 AA) */
   --color-text-main: #1e293b;
-  --color-text-muted: #64748b;
+  --color-text-muted: #475569;
   --color-heading: #0f172a;
 
   /* 10% - Warna Aksen Interaktif */
   --color-accent: #0284c7;
   --color-accent-hover: #0369a1;
   --color-accent-subtle: #e0f2fe;
-  --color-accent-focus: rgba(2, 132, 199, 0.2);
+  --color-accent-focus: rgba(2, 132, 199, 0.28);
 
   /* Status Warna */
   --color-success: #10b981;
-  --color-danger: #ef4444;
+  --color-danger: #b91c1c;
 
   /* Tipografi Dasar */
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --line-height-base: 1.6;
 
-  /* Sudut Membulat & Bayangan (Border Radius & Shadow) */
+  /* Sudut Membulat & Bayangan Halus */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -58,7 +59,7 @@
 }
 
 /* ==========================================================================
-   3. Tipografi Dasar & Elemen Global
+   3. Tipografi Dasar & Pengaturan Elemen Global
    ========================================================================== */
 html {
   scroll-behavior: smooth;
@@ -73,7 +74,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hierarki Heading */
+/* Hierarki Heading Jelas & Logis (h1 > h2 > h3) */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   font-weight: 700;
@@ -81,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   letter-spacing: -0.3px;
 }
 
@@ -89,7 +90,6 @@ h2 {
   font-size: 1.45rem;
   letter-spacing: -0.3px;
   margin-bottom: 0.75rem;
-  color: var(--color-heading);
   border-left: 4px solid var(--color-accent);
   padding-left: 0.75rem;
 }
@@ -97,7 +97,6 @@ h2 {
 h3 {
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
-  color: var(--color-heading);
 }
 
 p {
@@ -178,7 +177,7 @@ section {
   border-radius: var(--radius-lg);
   padding: 2rem;
   box-shadow: var(--shadow-md);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 section:hover {
@@ -199,7 +198,7 @@ li {
   line-height: 1.55;
 }
 
-/* Identitas Akademik dalam Bentuk Kartu Grid Ringkas */
+/* Identitas Akademik dalam Bentuk Kartu Grid */
 .identitas-akademik {
   list-style: none;
   padding-left: 0;
@@ -219,17 +218,24 @@ li {
 }
 
 /* ==========================================================================
-   7. Styling Tabel Semantik
+   7. Styling Tabel Semantik & Wrapper Responsif
    ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
 table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
-  margin: 1.5rem 0;
   font-size: 0.92rem;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
 }
 
 caption {
@@ -237,8 +243,10 @@ caption {
   font-size: 1rem;
   color: var(--color-heading);
   text-align: left;
-  padding: 0.5rem 0.25rem 0.75rem 0.25rem;
+  padding: 0.85rem 1rem;
   caption-side: top;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 thead {
@@ -318,7 +326,7 @@ tfoot td {
 }
 
 /* ==========================================================================
-   9. Formulir Interaktif & Aksesibilitas
+   9. Formulir Interaktif & Aksesibilitas (WCAG 2.2 AA)
    ========================================================================== */
 .contact-form {
   margin-top: 1.5rem;
@@ -429,6 +437,11 @@ small {
 
 .form-checkbox input[type="checkbox"] {
   margin-top: 3px;
+  accent-color: var(--color-accent);
+}
+
+.sub-fieldset input[type="radio"] {
+  accent-color: var(--color-accent);
 }
 
 .btn-submit {
@@ -512,4 +525,117 @@ footer nav a:hover,
 footer nav a:focus-visible {
   color: var(--color-accent-hover);
   text-decoration: underline;
+}
+
+/* ==========================================================================
+   11. Desain Responsif (Media Query @media (max-width: 768px))
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Header & Navigasi Mobile */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    gap: 0.75rem;
+  }
+
+  .header-brand {
+    width: 100%;
+  }
+
+  .header-brand h1 {
+    font-size: 1.2rem;
+  }
+
+  header nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+  }
+
+  header nav ul {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.4rem;
+  }
+
+  header nav a {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  /* Penyesuaian Spacing & Padding Section di Layar Kecil */
+  main {
+    margin: 1.25rem auto;
+    padding: 0 1rem;
+    gap: 1.25rem;
+  }
+
+  section {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Grid Komponen Portofolio Menjadi 1 Kolom */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .identitas-akademik {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  /* Penyesuaian Form di Ponsel */
+  fieldset {
+    padding: 1rem 0.85rem;
+  }
+
+  .sub-fieldset label {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .sub-fieldset label:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Aside & Footer Mobile */
+  aside {
+    margin: 0 1rem 1.5rem 1rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  footer {
+    padding: 1.5rem 1rem 2.5rem 1rem;
+  }
+
+  footer nav ul {
+    gap: 1rem;
+  }
+}
+
+/* ==========================================================================
+   12. Aksesibilitas: Dukungan prefers-reduced-motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
