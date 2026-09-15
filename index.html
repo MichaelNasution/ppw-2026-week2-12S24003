@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Profil - Michael Pratama Nasution (12S24003)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGASI ==================== -->
+  <!-- Bagian header memuat logo, nama pengembang, dan menu navigasi primer -->
+  <header>
+    <div class="header-brand">
+      <h1>Michael Pratama Nasution</h1>
+      <p>Mahasiswa Sistem Informasi &bull; Institut Teknologi Del</p>
+    </div>
+
+    <nav aria-label="Navigasi Utama">
+      <ul>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#portofolio">Portofolio Karya</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==================== KONTEN INTI (MAIN) ==================== -->
+  <!-- Bagian main memuat konten utama halaman web -->
+  <main>
+
+    <!-- Section 1: Tentang Saya -->
+    <!-- Menampilkan biodata diri, profil singkat, dan identitas akademik -->
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah mahasiswa Program Studi Sarjana Sistem Informasi di Institut Teknologi Del yang memiliki minat mendalam pada pengembangan web <em>full-stack</em>. Berfokus pada perancangan antarmuka pengguna yang modern, responsif, dan aksesibel, serta pembangunan arsitektur <em>backend</em> dan basis data yang efisien dan terstruktur. Selalu antusias memadukan estetika visual antarmuka dengan performa sistem web yang andal.
+      </p>
+
+      <ul class="identitas-akademik">
+        <li><strong>Nama Lengkap:</strong> Michael Pratama Nasution</li>
+        <li><strong>NIM:</strong> 12S24003</li>
+        <li><strong>Institusi:</strong> Institut Teknologi Del</li>
+        <li><strong>Program Studi:</strong> S1 Sistem Informasi</li>
+        <li><strong>Lokasi:</strong> Sitoluama, Laguboti, Toba, Sumatera Utara</li>
+        <li><strong>Email:</strong> michael.nasution@del.ac.id</li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Portofolio Karya -->
+    <!-- Menampilkan karya/proyek (Cashflow Website dll.) dan tabel rekapitulasi proyek -->
+    <section id="portofolio">
+      <h2>Portofolio Karya</h2>
+      <p>
+        Berikut adalah rekapitulasi riwayat proyek pengembangan perangkat lunak dan kegiatan teknologi yang telah saya kerjakan:
+      </p>
+
+      <table>
+        <caption>Rekapitulasi Riwayat Proyek & Capaian Teknologi</caption>
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Proyek / Kegiatan</th>
+            <th scope="col">Deskripsi Singkat</th>
+            <th scope="col">Teknologi</th>
+            <th scope="col">Tahun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><strong>Cashflow Website</strong></td>
+            <td>Sistem manajemen keuangan berbasis web untuk pelacakan pemasukan (income), pengeluaran (expense), dan analisis arus kas (cashflow).</td>
+            <td>React.js, Node.js, PHP, MySQL</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><strong>Bot Pelaporan Telegram</strong></td>
+            <td>Bot otomatisasi berbasis pesan instan untuk memfasilitasi pelaporan berkala dan notifikasi tugas akademik terintegrasi.</td>
+            <td>Node.js, Telegram Bot API, MySQL</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><strong>Kandidat Proyek GEMASTIK Web</strong></td>
+            <td>Pengembangan prototipe sistem web interaktif bertema solusi digital berkelanjutan untuk persiapan seleksi lomba GEMASTIK.</td>
+            <td>PHP, Laravel, MySQL</td>
+            <td>2025</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="4">Total Proyek / Kegiatan Tercatat</th>
+            <td>3 Proyek</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- Detail Sorotan Proyek Utama (List Tidak Berurutan / ul) -->
+      <article class="project-detail">
+        <h3>Sorotan Proyek: Cashflow Website</h3>
+        <p>
+          Sistem manajemen keuangan berbasis web yang dirancang untuk tracking income, expense, dan analisis cashflow secara terpadu. Cakupan pengerjaan proyek ini meliputi:
+        </p>
+        <ul class="project-features">
+          <li>Frontend Development dengan React.js</li>
+          <li>Backend Development dengan Node.js dan PHP</li>
+          <li>Integrasi Database untuk data transaksi</li>
+          <li>API Development &amp; Testing dengan Postman</li>
+          <li>UI/UX Design dengan HTML, CSS, JavaScript</li>
+        </ul>
+      </article>
+
+      <!-- Galeri Keahlian Teknis (List Berurutan / ol) -->
+      <article class="skills-showcase">
+        <h3>Galeri Keahlian Teknis</h3>
+        <p>
+          Daftar hierarki kompetensi utama dalam rekayasa perangkat lunak dan pengembangan web:
+        </p>
+        <ol class="skills-list">
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>Database Management (MySQL)</li>
+          <li>Web Development &amp; UI/UX Optimization</li>
+          <li>Full-stack Web Development (React.js, Node.js, PHP)</li>
+          <li>Database Design</li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- Section 3: Kontak & Layanan -->
+    <!-- Menampilkan formulir kontak/konsultasi layanan interaktif & accessible -->
+    <section id="kontak">
+      <!-- Formulir interaktif dengan fieldset & legend akan diisi di tahap selanjutnya -->
+    </section>
+
+  </main>
+
+  <!-- ==================== KONTEN PELENGKAP (ASIDE) ==================== -->
+  <!-- Menampilkan informasi pendukung (misal: info kampus, quick facts, tautan sosial) -->
+  <aside>
+    <!-- Konten pelengkap sidebar / info samping akan diisi di tahap selanjutnya -->
+  </aside>
+
+  <!-- ==================== PENUTUP DOKUMEN (FOOTER) ==================== -->
+  <!-- Menampilkan hak cipta (copyright), identitas akademik, dan kontak ringkas -->
+  <footer>
+    <!-- Hak cipta dan informasi kaki halaman akan diisi di tahap selanjutnya -->
+  </footer>
+
+</body>
+</html>
