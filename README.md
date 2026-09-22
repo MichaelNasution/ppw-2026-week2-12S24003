@@ -1,285 +1,139 @@
-# 🌟 Portofolio Profil Web - Michael Pratama Nasution
+# 🌟 Portofolio Profil Web Modern - Michael Pratama Nasution
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=EB5E28&height=200&section=header&text=Portofolio%20Profil%20Web&fontSize=42&fontColor=FFFCF2&animation=fadeIn&fontAlignY=38&desc=Praktikum%20PPW%20Minggu%2002%20%E2%80%A2%20HTML5%20Semantik%20%26%20CSS3%20Modern&descAlignY=58&descSize=18" alt="Header Banner" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=252422&height=200&section=header&text=Portofolio%20Web%20Bootstrap%205&fontSize=40&fontColor=FFFCF2&animation=fadeIn&fontAlignY=38&desc=Praktikum%20PPW%20Minggu%2003%20%E2%80%A2%20Refaktorisasi%20Bootstrap%205.3%20%2B%20Custom%20Overrides&descAlignY=58&descSize=17" alt="Header Banner" width="100%"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/MichaelNasution"><img src="https://img.shields.io/badge/Mahasiswa-Michael%20Pratama%20Nasution-252422?style=for-the-badge&logo=github&logoColor=FFFCF2" alt="Mahasiswa"/></a>
   <img src="https://img.shields.io/badge/NIM-12S24003-EB5E28?style=for-the-badge" alt="NIM"/>
-  <img src="https://img.shields.io/badge/Prodi-S1%20Sistem%20Informasi-403D39?style=for-the-badge" alt="Prodi"/>
-  <img src="https://img.shields.io/badge/Kampus-Institut%20Teknologi%20Del-2D6A4F?style=for-the-badge" alt="Kampus"/>
+  <img src="https://img.shields.io/badge/Mata%20Kuliah-PPW%20(12S3101)-403D39?style=for-the-badge" alt="Mata Kuliah"/>
+  <img src="https://img.shields.io/badge/Prodi-S1%20Sistem%20Informasi-2D6A4F?style=for-the-badge" alt="Prodi"/>
+  <img src="https://img.shields.io/badge/Kampus-Institut%20Teknologi%20Del-252422?style=for-the-badge" alt="Kampus"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-Semantik%20Lengkap-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/CSS3-Pure%20Vanilla%20CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
-  <img src="https://img.shields.io/badge/Design%20System-Rustic%20Charm%20(60--30--10)-EB5E28?style=flat-square" alt="Rustic Charm"/>
+  <img src="https://img.shields.io/badge/Bootstrap-5.3.3%20CDN-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap 5.3"/>
+  <img src="https://img.shields.io/badge/Bootstrap%20Icons-1.11.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap Icons"/>
+  <img src="https://img.shields.io/badge/Custom%20CSS-Rustic%20Charm%20Theme-EB5E28?style=flat-square" alt="Rustic Charm"/>
   <img src="https://img.shields.io/badge/Aksesibilitas-WCAG%202.2%20AA-success?style=flat-square&logo=w3c&logoColor=white" alt="WCAG AA"/>
-  <img src="https://img.shields.io/badge/Tampilan-100%25%20Responsif%20Mobile-blueviolet?style=flat-square" alt="Responsif"/>
+  <img src="https://img.shields.io/badge/Validasi-Bootstrap%20Client--Side-2D6A4F?style=flat-square" alt="Validasi Form"/>
 </p>
 
 ---
 
-## 📌 Ringkasan Proyek
+## 🔗 Tautan Demo Langsung & Repositori
 
-Repository ini berisi implementasi halaman web profil profesional yang dibangun menggunakan **HTML5 Semantik murni** dan **CSS3 modern (Pure Vanilla CSS)** tanpa pustaka atau framework pihak ketiga. Halaman web ini dirancang untuk memenuhi kriteria penugasan **Praktikum Pemrograman dan Pengujian Aplikasi Web (PPW - 12S3101) Minggu 02**.
-
-Fokus utama perancangan meliputi:
-- **Semantika HTML5 Standar W3C**: Pemanfaatan tag `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<figure>`, `<table>`, serta pengelompokan formulir menggunakan `<fieldset>` dan `<legend>`.
-- **Desain Visual & Tema "Rustic Charm"**: Penerapan aturan komposisi warna internasional **60-30-10** yang harmonis, hangat, dan ramah di mata.
-- **Aksesibilitas (WCAG 2.2 Level AA)**: Rasio kontras teks tinggi (>10:1), navigasi keyboard penuh (`:focus-visible`), penanda label eksplisit, dan dukungan `prefers-reduced-motion`.
-- **Tata Letak Adaptif & Responsif**: Mengombinasikan **CSS Flexbox** dan **CSS Grid** untuk transisi antarmuka mulus di layar Desktop, Tablet, hingga Layar Ponsel Pintar (*Mobile*).
+- **Live Demo (GitHub Pages)**: [https://michaelnasution.github.io/ppw-2026-week2-12S24003/](https://michaelnasution.github.io/ppw-2026-week2-12S24003/) *(Aktifkan pada branch `week3-bootstrap`)*
+- **Branch Kerja**: `week3-bootstrap`
+- **Repositori**: `MichaelNasution/ppw-2026-week2-12S24003`
 
 ---
 
-## 🧭 Daftar Isi Cepat
+## 📌 Ringkasan Pembaruan Minggu 3
 
-- [✨ Fitur Utama Halaman](#-fitur-utama-halaman)
-- [🎨 Sistem Desain & Palet Warna "Rustic Charm"](#-sistem-desain--palet-warna-rustic-charm)
-- [🏛️ Anatomi & Struktur Dokumen](#️-anatomi--struktur-dokumen)
-- [📱 Pengujian Responsivitas & Aksesibilitas](#-pengujian-responsivitas--aksesibilitas)
-- [📂 Struktur Berkas Proyek](#-struktur-berkas-proyek)
-- [🚀 Cara Menjalankan Halaman Web](#-cara-menjalankan-halaman-web)
-- [✅ Checklist Capaian Tugas](#-checklist-capaian-tugas)
-- [👤 Biodata Mahasiswa](#-biodata-mahasiswa)
+Pada penugasan **Minggu 03**, halaman web portofolio profil dari Minggu 02 direfaktorisasi secara menyeluruh menggunakan pustaka CSS **Bootstrap 5.3.3** dan **Bootstrap Icons** melalui Content Delivery Network (CDN), yang dipadukan dengan **Custom CSS Overrides** pada berkas `custom-style.css`.
 
----
-
-## ✨ Fitur Utama Halaman
-
-```
-┌───────────────────────────────────────────────────────────┐
-│ [Header Sticky] Brand Name + Navigasi Fleksibel           │
-├───────────────────────────────────────────────────────────┤
-│ [Section 1: Tentang Saya]                                 │
-│  ├─ Banner Aksen + Avatar Inisial Bulat ("MP")            │
-│  ├─ Kolom Kiri: Biografi Pengembang + Badge Pills         │
-│  └─ Kolom Kanan: Rincian Kartu Identitas Vertikal         │
-├───────────────────────────────────────────────────────────┤
-│ [Section 2: Portofolio Karya]                             │
-│  ├─ Tabel Rekapitulasi Proyek (thead, tbody, tfoot)       │
-│  └─ CSS Grid: Detail Sorotan Proyek (ul) & Keahlian (ol)  │
-├───────────────────────────────────────────────────────────┤
-│ [Section 3: Formulir Layanan Interaktif]                  │
-│  ├─ Fieldset 1: Data Diri (Nama, Email, Telp)             │
-│  ├─ Fieldset 2: Kebutuhan (Kategori, Radio, Pesan, Check) │
-│  └─ Tombol CTA "Kirim Permintaan Konsultasi"             │
-├───────────────────────────────────────────────────────────┤
-│ [Aside] Fakta Menarik & Fokus Riset                       │
-├───────────────────────────────────────────────────────────┤
-│ [Footer] Hak Cipta, Afiliasi Kampus & Tautan Cepat        │
-└───────────────────────────────────────────────────────────┘
-```
+Fokus utama pembaruan:
+1. **Pondasi Framework Modern**: Integrasi Bootstrap 5.3.3 CSS & JS Bundle beserta Bootstrap Icons tanpa menghilangkan struktur semantik HTML5 yang telah dibangun sebelumnya.
+2. **Navbar Responsif & Sticky**: Navigasi sticky yang mendukung menu *collapse/expand* dengan hamburger toggle di layar mobile.
+3. **Hero Section Elegan**: Banner visual full-width dengan kontras gelap (*Carbon Black*), status badge interaktif, tipografi tegas, dan 2 tombol *Call to Action* (CTA).
+4. **Refaktorisasi Kartu Profil**: Menggunakan komponen Bootstrap Card dan sistem 2 kolom grid yang adaptif di semua ukuran layar.
+5. **Transformasi Tabel ke Grid Kartu Proyek & Modal Dialog**: Menampilkan 4 kartu proyek interaktif dengan micro-interaction hover, badge stack teknologi, serta modal dialog detail terpisah untuk tiap proyek.
+6. **Formulir Interaktif Canggih**: Penggunaan Floating Labels, Input Group berikon, segmented toggle radio button, dan validasi visual client-side *real-time*.
+7. **Identitas Visual Personal "Rustic Charm"**: Overrides CSS murni berbasis variabel `:root` tanpa penggunaan `!important`, memastikan nol warna biru default Bootstrap yang tertinggal.
 
 ---
 
-## 🎨 Sistem Desain & Palet Warna "Rustic Charm"
+## ⚖️ Tabel Komparasi: Sebelum vs Sesudah Integrasi Framework
 
-Halaman web ini mengadopsi palet warna **Rustic Charm** dengan aturan proporsi visual **60-30-10** untuk menjamin kenyamanan membaca serta hierarki elemen yang tegas:
-
-| Proporsi | Peran Desain | Nama Warna | Kode HEX | Nilai RGB | Preview |
-| :---: | :--- | :--- | :---: | :---: | :---: |
-| **60%** | **Dominan (Background & Permukaan)** | Floral White | `#FFFCF2` | `rgb(255, 252, 242)` | ![#FFFCF2](https://via.placeholder.com/20/FFFCF2/000000?text=+) |
-| **30%** | **Struktur, Teks & Kontur** | Charcoal Brown | `#403D39` | `rgb(64, 61, 57)` | ![#403D39](https://via.placeholder.com/20/403D39/FFFFFF?text=+) |
-| **30%** | **Heading & Dark Accent** | Carbon Black | `#252422` | `rgb(37, 36, 34)` | ![#252422](https://via.placeholder.com/20/252422/FFFFFF?text=+) |
-| **30%** | **Border & Separator** | Silver Mist | `#CCC5B9` | `rgb(204, 197, 185)` | ![#CCC5B9](https://via.placeholder.com/20/CCC5B9/000000?text=+) |
-| **10%** | **Aksen Interaktif (CTA & Highlight)** | Spicy Paprika | `#EB5E28` | `rgb(235, 94, 40)` | ![#EB5E28](https://via.placeholder.com/20/EB5E28/FFFFFF?text=+) |
-
-<details>
-<summary>🔍 <b>Klik untuk melihat Variabel CSS (CSS Custom Properties)</b></summary>
-
-```css
-:root {
-  /* 60% - Warna Dominan Netral */
-  --color-bg: #FFFCF2;               /* Floral White: latar utama halaman */
-  --color-surface: #FFFCF2;          /* Floral White: permukaan card & section */
-  --color-surface-subtle: #F5EFE6;   /* Tint hangat untuk card bertingkat */
-  --color-surface-alt: #EFE8DC;      /* Background selang-seling tabel */
-
-  /* 30% - Warna Teks & Elemen Struktural */
-  --color-text-main: #403D39;        /* Charcoal Brown: teks body (kontras > 10:1) */
-  --color-text-muted: #6B665F;       /* Charcoal Brown muda: teks pendukung */
-  --color-heading: #252422;          /* Carbon Black: heading h1-h3 (kontras > 15:1) */
-  --color-border: #CCC5B9;           /* Silver: garis border pemisah */
-  --color-dark-surface: #252422;     /* Carbon Black: latar belakang footer */
-
-  /* 10% - Warna Aksen Interaktif */
-  --color-accent: #EB5E28;           /* Spicy Paprika: tombol CTA & indikator aktif */
-  --color-accent-hover: #D14D19;     /* Spicy Paprika gelap saat hover */
-  --color-accent-subtle: rgba(235, 94, 40, 0.12); /* Pill badge background */
-  --color-accent-focus: rgba(235, 94, 40, 0.25);  /* Focus outline ring */
-}
-```
-</details>
-
----
-
-## 🏛️ Anatomi & Struktur Dokumen
-
-Setiap blok kode disusun dengan rapi, beranotasi lengkap, dan mematuhi kaidah semantik HTML5 terkini.
-
-<details open>
-<summary>🧭 <b>1. Header & Navigasi Utama (Sticky)</b></summary>
-<br>
-
-- Menggunakan tag `<header>` dengan properti `position: sticky; top: 0;` sehingga menu navigasi tetap dapat diakses saat pengguna menggulir halaman (*scrolling*).
-- Menampilkan nama lengkap serta identitas institusi kampus, dipadukan dengan tautan jangkar internal (`#tentang`, `#portofolio`, `#kontak`) dengan transisi warna saat kursor diarahkan (*hover*).
-</details>
-
-<details>
-<summary>👤 <b>2. Section Profil Profesional (#tentang)</b></summary>
-<br>
-
-- **Banner & Avatar**: Menggunakan banner solid Spicy Paprika dengan avatar inisial bulat (`MP`) bertingkat (*floating initial badge*) dengan bayangan halus.
-- **Layout 2 Kolom**: Dibangun dengan **CSS Grid** (`grid-template-columns: 1.65fr 1fr;`):
-  - **Kolom Kiri**: Biografi pengembang yang komprehensif, dilengkapi *skill pill badges* interaktif beranimasi halus saat di-hover.
-  - **Kolom Kanan**: Kartu identitas vertikal memuat NIM, Institusi, Program Studi, Lokasi, dan tautan surat elektronik langsung (`mailto:`).
-</details>
-
-<details>
-<summary>💼 <b>3. Section Portofolio Karya (#portofolio)</b></summary>
-<br>
-
-- **Tabel Rekapitulasi Semantik**:
-  - Memanfaatkan elemen `<caption>`, `<thead>`, `<tbody>`, dan `<tfoot>`.
-  - Menggunakan atribut `scope="col"` pada kolom header dan `scope="row"` pada baris item untuk aksesibilitas pembaca layar (*screen reader*).
-  - Dilengkapi *zebra-striping* selang-seling serta pembungkus `.table-responsive` agar tabel dapat digeser horizontal secara halus di perangkat ponsel tanpa merusak tata letak layar.
-- **Kartu Sorotan Proyek & Galeri Keahlian**:
-  - Menggunakan **CSS Grid** responsif (`repeat(auto-fit, minmax(320px, 1fr))`).
-  - Menampilkan daftar fitur proyek utama dalam bentuk daftar tak berurut (`<ul>`) dan hierarki kompetensi dalam daftar berurut (`<ol>`).
-</details>
-
-<details>
-<summary>📝 <b>4. Section Formulir Interaktif & Aksesibel (#kontak)</b></summary>
-<br>
-
-- Mengelompokkan formulir secara logis dengan dua pasang `<fieldset>` dan `<legend>`:
-  1. **Data Identitas Diri**: Input teks nama, email validasi HTML5, dan nomor telepon.
-  2. **Detail Permintaan & Pesan**: Pilihan kategori `<select>`, estimasi pekan `<input type="number">`, pilihan radio bertema jenis kebutuhan, deskripsi pesan `<textarea>`, dan persetujuan `<input type="checkbox">`.
-- Semua kolom input terhubung secara eksplisit dengan `<label for="...">`.
-- Kolom wajib ditandai dengan indikator `<span class="req">*</span>` dan atribut `required`.
-- Desain *Focus Ring* kontras tinggi (`--color-accent-focus`) saat input sedang aktif digunakan keyboard (*Tab key*).
-</details>
-
-<details>
-<summary>💡 <b>5. Aside & Footer Dokumen</b></summary>
-<br>
-
-- **`<aside>`**: Menyajikan informasi sampingan yang melengkapi konten utama, seperti catatan prestasi partisipasi seleksi GEMASTIK dan fokus riset web.
-- **`<footer>`**: Diberi kontras warna gelap (`--color-dark-surface`) dengan radius bagian atas, memuat informasi hak cipta akademik, tahun perkuliahan, tombol navigasi kembali ke atas (`#tentang`), serta tautan eksternal aman (`rel="noopener noreferrer"`).
-</details>
-
----
-
-## 📱 Pengujian Responsivitas & Aksesibilitas
-
-### 📐 Breakpoint Responsif Media Query
-Antarmuka web telah diuji dan dioptimalkan untuk berbagai resolusi layar:
-
-| Ukuran Layar | Target Perangkat | Penyesuaian Tata Letak |
+| Aspek / Komponen | Sebelum (Minggu 02 - Pure HTML5 & CSS3) | Sesudah (Minggu 03 - Bootstrap 5.3 + Custom Overrides) |
 | :--- | :--- | :--- |
-| **> 768px** | Komputer & Laptop | Layout 2 Kolom Profil, Tabel Lebar Penuh, Grid Portofolio Multi-kolom |
-| **≤ 768px** | Tablet & Smartphone | Header bertumpuk vertikal, Profil berubah 1 kolom, Tabel dengan touch scroll, formulir adaptif penuh |
+| **Struktur & Layout** | CSS Flexbox & CSS Grid manual kaku dengan batas kontainer tetap (`max-width: 1000px`). | Sistem Grid Bootstrap 12-kolom responsif (`container`, `row`, `col-*`), `row-cols-*`, dan utility spacing terstandarisasi. |
+| **Header & Navigasi** | Header statis Flexbox dengan link horizontal sederhana tanpa hamburger menu di ponsel. | **Bootstrap Navbar Sticky** (`navbar-expand-lg sticky-top navbar-dark`) dengan **Hamburger Toggler** fungsional di layar kecil. |
+| **Hero Section** | Belum tersedia (halaman langsung dimulai dari kartu profil). | **Hero Section Full-Width** bertema gelap (*Carbon Black*), badge ketersediaan beranimasi *pulse*, tagline, dan 2 tombol CTA navigasi. |
+| **Section Tentang Saya** | Struktur manual div dua kolom dengan pembatas garis CSS murni. | **Bootstrap Card** (`card shadow-sm rounded-4`) dengan pembagian kolom grid (`col-lg-8` & `col-lg-4`) dan Badge Pills resmi. |
+| **Portofolio Karya** | Tabel statis HTML (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`) yang digulir horizontal pada mobile. | **Grid 4 Kartu Proyek** (`row-cols-1 row-cols-md-2 row-cols-lg-3 g-4`) + **4 Modal Dialog** interaktif terhubung untuk rincian pekerjaan. |
+| **Galeri Keahlian** | Dua artikel terpisah dalam CSS Grid statis. | Ditata ulang menjadi **List Group Numbered** Bootstrap di bawah grid kartu proyek dengan badge kategori keahlian. |
+| **Formulir Kontak** | Input form standar dengan label statis di atas kolom input. | **Floating Labels** (`form-floating`), **Input Group** berikon di kiri, **Toggle Button Group** (`btn-check`), dan **Real-Time Client Validation** (`was-validated`). |
+| **Styling & Theming** | Menggunakan CSS Reset manual dan variabel vanilla CSS di `style.css`. | Berkas `custom-style.css` yang melakukan **overrides spesifik tanpa `!important`** pada komponen Bootstrap, selaras dengan palet *Rustic Charm*. |
 
-```mermaid
-graph TD
-    A[Layar Pengguna] --> B{Lebar Viewport}
-    B -->|> 768px| C[Desktop Mode: Grid 2 Kolom + Header Horizontal]
-    B -->|<= 768px| D[Mobile Mode: 1 Kolom Bertumpuk + Touch-friendly Controls]
-    C --> E[Pengalaman Optimal di Layar Lebar]
-    D --> F[Scroll Horisontal Tabel + Navigasi Kompak]
-```
+---
 
-### ♿ Standar Aksesibilitas Web (WCAG 2.2 Level AA)
-- [x] **Rasio Kontras**: Teks Charcoal Brown (`#403D39`) pada Floral White (`#FFFCF2`) mencapai rasio kontras **10.5:1** (jauh melampaui batas minimum WCAG AA yaitu 4.5:1).
-- [x] **Akses Keyboard**: Seluruh elemen interaktif (`a`, `button`, `input`, `select`, `textarea`) memiliki outline visual tegas saat dinavigasi via tombol `Tab`.
-- [x] **Dukungan Reduced Motion**: Dilengkapi aturan `@media (prefers-reduced-motion: reduce)` yang secara otomatis mematikan atau meminimalkan durasi animasi bagi pengguna yang memiliki gangguan vestibular.
-- [x] **Atribut ARIA**: Dilengkapi dengan `aria-label` pada elemen navigasi, section penting, dan `aria-describedby` untuk panduan input email.
+## 🎨 Palet Warna "Rustic Charm" (Aturan 60-30-10)
+
+| Proporsi | Peran Desain | Nama Warna | Kode HEX | Variabel CSS | Penerapan |
+| :---: | :--- | :--- | :---: | :--- | :--- |
+| **60%** | Dominan / Background | Floral White | `#FFFCF2` | `--color-bg` | Latar utama halaman web |
+| **60%** | Permukaan Komponen | Pure White | `#FFFFFF` | `--color-surface` | Kartu profil, kartu proyek, isi modal dialog |
+| **30%** | Teks Body Utama | Charcoal Brown | `#403D39` | `--color-text` | Teks paragraf, biografi, deskripsi proyek |
+| **30%** | Heading & Dark Accent | Carbon Black | `#252422` | `--color-heading` | Navbar, footer, modal-header, heading judul |
+| **30%** | Elemen Netral / Border | Silver Mist | `#CCC5B9` | `--color-border` | Garis tepi kartu, pemisah kolom, input form |
+| **10%** | Aksen Interaktif | Spicy Paprika | `#EB5E28` | `--color-accent` | Tombol CTA, hover link, badge sorotan, focus ring |
+
+---
+
+## 📸 Dokumentasi & Pratinjau Tampilan (Screenshots)
+
+> *Tambahkan tangkapan layar antarmuka halaman web pada placeholder di bawah ini setelah dideploy:*
+
+| Tampilan Desktop (>= 1200px) | Tampilan Mobile (< 576px) |
+| :---: | :---: |
+| ![Pratinjau Desktop](https://via.placeholder.com/600x350/252422/FFFCF2?text=Screenshot+Desktop+View) | ![Pratinjau Mobile](https://via.placeholder.com/300x550/252422/FFFCF2?text=Screenshot+Mobile+View) |
+
+| Modal Dialog Proyek Interaktif | Validasi Formulir Client-Side |
+| :---: | :---: |
+| ![Pratinjau Modal](https://via.placeholder.com/450x300/403D39/FFFCF2?text=Screenshot+Modal+Dialog) | ![Pratinjau Validasi Form](https://via.placeholder.com/450x300/EB5E28/FFFCF2?text=Screenshot+Form+Validation) |
 
 ---
 
 ## 📂 Struktur Berkas Proyek
 
-```plaintext
+```
 ppw-2026-week2-12S24003/
-├── index.html        # Dokumen utama HTML5 berstruktur semantik lengkap
-├── style.css         # Berkas tata gaya CSS3 murni (Rustic Charm Design System)
-└── README.md         # Dokumentasi interaktif dan penjelasan komprehensif proyek
+├── index.html           # Berkas HTML5 utama dengan integrasi Bootstrap 5.3 CDN & semantik lengkap
+├── custom-style.css     # Berkas styling kustom (Overrides Bootstrap bertema Rustic Charm tanpa !important)
+├── style.css            # Berkas CSS Minggu 02 (diarsipkan / dikosongkan)
+├── README.md            # Dokumentasi lengkap proyek dan komparasi refaktorisasi
+└── .vscode/
+    └── settings.json    # Konfigurasi workspace editor
 ```
 
 ---
 
-## 🚀 Cara Menjalankan Halaman Web
+## 🚀 Panduan Menjalankan & Deployment
 
-Anda dapat menjalankan halaman web ini dengan salah satu dari metode berikut:
+### 1. Menjalankan di Komputer Lokal
+1. Pastikan berkas proyek berada pada direktori lokal.
+2. Buka berkas `index.html` menggunakan peramban web modern (Google Chrome, Mozilla Firefox, Microsoft Edge), atau gunakan ekstensi **Live Server** pada VS Code.
 
-### Opsi 1: Menggunakan VS Code Live Server (Direkomendasikan)
-1. Buka folder repositori ini di **Visual Studio Code**.
-2. Pastikan ekstensi **Live Server** (oleh *Ritwick Dey*) telah terpasang.
-3. Klik kanan pada berkas `index.html` dan pilih **Open with Live Server**, atau klik tombol **Go Live** di *status bar* bawah VS Code.
-4. Halaman akan terbuka otomatis di peramban pada alamat `http://127.0.0.1:5500/index.html`.
-
-### Opsi 2: Buka Langsung di Peramban Web (Direct File Access)
-1. Buka File Explorer di komputer Anda.
-2. Masuk ke direktori proyek:
-   ```plaintext
-   d:\[college]\PPW\ppw-2026-week2-12S24003\
-   ```
-3. Klik dua kali pada berkas `index.html` (atau klik kanan $\rightarrow$ **Open with** $\rightarrow$ pilih browser favorit Anda: Google Chrome, Microsoft Edge, Mozilla Firefox).
-
-### Opsi 3: Menggunakan Server Lokal Python / Node.js
-Jika Anda memiliki terminal aktif di folder proyek:
-
+### 2. Prosedur Commit & Deploy ke GitHub Pages
+Jalankan perintah berikut pada terminal Git:
 ```bash
-# Menggunakan Python 3
-python -m http.server 8000
+# 1. Pastikan berada di branch week3-bootstrap
+git checkout -b week3-bootstrap
 
-# ATAU menggunakan npx (Node.js)
-npx serve .
+# 2. Tambahkan perubahan dan lakukan commit
+git add .
+git commit -m "feat: refactor portofolio menggunakan Bootstrap 5.3 CDN dan Custom CSS Overrides"
+
+# 3. Push ke branch remote GitHub
+git push -u origin week3-bootstrap
+
+# 4. Aktivasi GitHub Pages:
+# - Buka repositori di GitHub -> Settings -> Pages
+# - Pada opsi 'Branch', pilih 'week3-bootstrap' dan folder '/ (root)'
+# - Klik 'Save' dan tunggu proses deployment selesai.
 ```
-Lalu buka alamat `http://localhost:8000` pada peramban web Anda.
 
 ---
 
-## ✅ Checklist Capaian Tugas
+## 👤 Identitas Mahasiswa
 
-Berdasarkan capaian praktikum minggu ke-2, seluruh instrumen telah diselesaikan secara menyeluruh:
-
-- [x] **Struktur HTML5 Semantik**: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
-- [x] **Penggunaan Heading Logis**: Hierarki judul yang konsisten dari `<h1>` hingga `<h3>`.
-- [x] **Daftar Berurutan & Tak Berurutan**: Menggunakan tag `<ul>` dan `<ol>` dengan styling teratur.
-- [x] **Tabel Data Semantik**: Memiliki `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, `<th>` bertingkat, dan pembungkus responsif.
-- [x] **Formulir Interaktif Lengkap**: Memiliki `<fieldset>`, `<legend>`, `<label>`, `<input>` (text, email, tel, number, radio, checkbox), `<select>`, `<textarea>`, dan tombol `<button type="submit">`.
-- [x] **Sistem Desain Warna Harmonis**: Penerapan aturan 60-30-10 dengan palet **Rustic Charm**.
-- [x] **Tata Letak Modern**: Menggabungkan CSS Flexbox dan CSS Grid.
-- [x] **Desain Responsif**: Penataan antarmuka adaptif pada breakpoint layar mobile (768px).
-- [x] **Standar Aksesibilitas**: Memenuhi WCAG 2.2 AA untuk kontras warna, keyboard navigation, dan reduced motion.
-
----
-
-## 👤 Biodata Mahasiswa
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://ui-avatars.com/api/?name=Michael+Pratama+Nasution&background=EB5E28&color=FFFCF2&size=128&bold=true" width="100px" alt="Avatar Michael" style="border-radius: 50%;"/>
-      </td>
-      <td>
-        <strong>Nama Lengkap:</strong> Michael Pratama Nasution<br>
-        <strong>NIM:</strong> 12S24003<br>
-        <strong>Program Studi:</strong> S1 Sistem Informasi<br>
-        <strong>Fakultas:</strong> Fakultas Informatika &amp; Teknik Elektro (FITE)<br>
-        <strong>Institusi:</strong> Institut Teknologi Del, Sitoluama, Laguboti, Toba<br>
-        <strong>Mata Kuliah:</strong> Pemrograman dan Pengujian Aplikasi Web (12S3101)<br>
-        <strong>Tahun Akademik:</strong> 2025/2026
-      </td>
-    </tr>
-  </table>
-</div>
-
-<p align="center">
-  Dibuat dengan dedikasi untuk keunggulan akademik dan standar industri rekayasa perangkat lunak web modern.<br>
-  &copy; 2026 Michael Pratama Nasution. All rights reserved.
-</p>
+- **Nama Lengkap** : Michael Pratama Nasution
+- **NIM** : 12S24003
+- **Program Studi** : S1 Sistem Informasi
+- **Mata Kuliah** : Pemrograman dan Pengujian Aplikasi Web (12S3101)
+- **Institusi** : Institut Teknologi Del
+- **Email Institusi** : [michael.nasution@del.ac.id](mailto:michael.nasution@del.ac.id)
+- **Tahun Akademik** : 2025/2026

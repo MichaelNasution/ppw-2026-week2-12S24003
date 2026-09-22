@@ -1,0 +1,1009 @@
+/* ==========================================================================
+   Berkas Gaya Kustom: custom-style.css
+   Mata Kuliah : Pemrograman dan Pengujian Aplikasi Web (12S3101)
+   Praktikum   : Minggu 03 - Refaktorisasi Bootstrap 5.3 & Custom Theme Overrides
+   Nama        : Michael Pratama Nasution
+   NIM         : 12S24003
+   Tema Warna  : Rustic Charm (Palet Personal Bebas dari Default Bootstrap)
+   Standar     : WCAG 2.2 Level AA Accessibility & Responsive Web Design
+   Catatan     : Bebas dari pemakaian !important pada komponen overrides
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Variabel Desain & Palet Warna "Rustic Charm" (60-30-10)
+   ========================================================================== */
+:root {
+  /* 6 CSS Custom Properties Wajib */
+  --color-bg: #FFFCF2;               /* 60% Floral White: latar utama halaman */
+  --color-surface: #FFFFFF;          /* Pure White: latar card & modal (kontras di atas Floral White) */
+  --color-surface-subtle: #F5EFE6;   /* Warm Tint: header card, background sekunder */
+  --color-surface-alt: #EFE8DC;      /* Muted Warm: background selang-seling */
+  --color-text: #403D39;             /* 30% Charcoal Brown: teks body & paragraf (kontras > 10:1) */
+  --color-heading: #252422;          /* Carbon Black: heading, navbar, modal-header, footer (kontras > 15:1) */
+  --color-accent: #EB5E28;           /* 10% Spicy Paprika: tombol submit, CTA, badge sorotan, hover */
+  --color-border: #CCC5B9;           /* Silver: border card, form, pemisah */
+
+  /* Variabel Pendukung & Interaksi */
+  --color-accent-hover: #D14D19;     /* Spicy Paprika gelap: hover state */
+  --color-accent-subtle: rgba(235, 94, 40, 0.12); /* Paprika transparan untuk badge pill */
+  --color-accent-focus: rgba(235, 94, 40, 0.25);  /* Focus ring input & tombol */
+  --color-accent-dark: #B84214;      /* Paprika pekat untuk teks badge kontras tinggi */
+  --color-border-hover: #A8A093;     /* Silver gelap: hover border */
+  --color-text-muted: #6B665F;       /* Charcoal Brown muda untuk label & teks penjelas */
+  --color-text-light: #FFFCF2;       /* Floral White: teks di atas latar gelap */
+  --color-text-light-muted: #CCC5B9; /* Silver: teks sekunder di atas latar gelap */
+
+  /* Kompatibilitas Variabel Lama */
+  --color-text-main: var(--color-text);
+  --color-dark-surface: var(--color-heading);
+
+  /* Tipografi Modern & Elegan */
+  --font-family-base: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --line-height-base: 1.65;
+
+  /* Geometri & Sudut Membulat */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+
+  /* Bayangan Halus Bernuansa Hangat */
+  --shadow-sm: 0 2px 8px rgba(37, 36, 34, 0.06);
+  --shadow-md: 0 6px 18px rgba(37, 36, 34, 0.09);
+  --shadow-lg: 0 14px 32px rgba(37, 36, 34, 0.13);
+}
+
+/* ==========================================================================
+   2. Reset Global & Body
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   3. Tipografi Heading (Classy & Tegas)
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--color-heading);
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+h1 {
+  font-size: 1.6rem;
+  letter-spacing: -0.4px;
+}
+
+h2, .section-title {
+  font-size: 1.45rem;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.85rem;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 0.85rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-accent);
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent-hover);
+}
+
+/* Helper text accent */
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   4. Navbar Bootstrap Overrides (Carbon Black & Spicy Paprika)
+   ========================================================================== */
+header {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+header .custom-navbar {
+  background-color: var(--color-heading);
+  border-bottom: 1px solid rgba(204, 197, 185, 0.18);
+  box-shadow: 0 4px 16px rgba(37, 36, 34, 0.18);
+  padding: 0.9rem 0;
+  z-index: 1030;
+}
+
+header .custom-navbar .navbar-brand {
+  color: var(--color-text-light);
+  font-size: 1.25rem;
+  letter-spacing: -0.3px;
+  transition: opacity 0.2s ease;
+}
+
+header .custom-navbar .navbar-brand:hover {
+  color: var(--color-text-light);
+  opacity: 0.92;
+}
+
+.brand-accent {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+header .custom-navbar .navbar-nav .nav-link {
+  color: var(--color-text-light-muted);
+  font-weight: 500;
+  font-size: 0.94rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+header .custom-navbar .navbar-nav .nav-link:hover,
+header .custom-navbar .navbar-nav .nav-link:focus {
+  color: var(--color-accent);
+}
+
+header .custom-navbar .navbar-nav .nav-link.active {
+  color: var(--color-accent);
+  font-weight: 600;
+  background-color: rgba(235, 94, 40, 0.12);
+}
+
+header .custom-navbar button.navbar-toggler {
+  border: 1px solid rgba(204, 197, 185, 0.35);
+  padding: 0.4rem 0.65rem;
+  font-size: 1rem;
+}
+
+header .custom-navbar button.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px var(--color-accent-focus);
+}
+
+/* ==========================================================================
+   5. Hero Section (Modern, Classy, Dark Contrast)
+   ========================================================================== */
+.hero-section {
+  background-color: var(--color-heading);
+  border-bottom: 3px solid var(--color-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(235, 94, 40, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  background-color: rgba(235, 94, 40, 0.12);
+  border: 1px solid rgba(235, 94, 40, 0.3);
+  color: var(--color-accent);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(235, 94, 40, 0.25);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(235, 94, 40, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(235, 94, 40, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(235, 94, 40, 0); }
+}
+
+.hero-title {
+  color: var(--color-text-light);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  color: var(--color-accent);
+}
+
+.hero-tagline {
+  color: var(--color-text-light-muted);
+  max-width: 600px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   6. Tombol CTA & Tombol Primary Bootstrap Overrides
+   ========================================================================== */
+.btn-primary,
+.btn-hero-primary,
+.btn-submit {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: var(--color-text-light);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-hero-primary {
+  font-size: 0.95rem;
+  padding: 0.75rem 1.65rem;
+  box-shadow: 0 4px 14px rgba(235, 94, 40, 0.35);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-hero-primary:hover,
+.btn-hero-primary:focus,
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(235, 94, 40, 0.45);
+}
+
+.btn-hero-outline {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1.5px solid var(--color-border);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.65rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-hero-outline:hover,
+.btn-hero-outline:focus {
+  background-color: var(--color-text-light);
+  color: var(--color-heading);
+  border-color: var(--color-text-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline-accent:hover,
+.btn-outline-accent:focus {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(235, 94, 40, 0.35);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--color-border);
+  border-color: var(--color-border-hover);
+  color: var(--color-heading);
+}
+
+/* Card Visual Profil Hero (Desktop) */
+.hero-profile-card {
+  background-color: rgba(64, 61, 57, 0.45);
+  border: 1px solid rgba(204, 197, 185, 0.2);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 320px;
+}
+
+.hero-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 3px solid rgba(255, 252, 242, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-skill-chip {
+  background-color: rgba(255, 252, 242, 0.08);
+  border: 1px solid rgba(204, 197, 185, 0.25);
+  color: var(--color-text-light);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+/* ==========================================================================
+   7. Layout Konten Utama (Main) & Spacing Antar Section
+   ========================================================================== */
+main {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+section:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+/* ==========================================================================
+   8. Bootstrap Card Overrides (Micro-interactions)
+   ========================================================================== */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+/* Efek Translate Micro-interaction khusus Project Cards */
+div.col > .card.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   9. Section Tentang Saya (Profil Profesional)
+   ========================================================================== */
+section#tentang.card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.profile-banner {
+  height: 70px;
+  background-color: var(--color-accent);
+}
+
+.profile-header {
+  text-align: center;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.profile-avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 4px solid var(--color-surface);
+  box-shadow: 0 4px 12px rgba(37, 36, 34, 0.15);
+  margin: -39px auto 0.75rem auto;
+  position: relative;
+}
+
+.profile-name {
+  color: var(--color-heading);
+  letter-spacing: -0.3px;
+  border-left: none;
+  padding-left: 0;
+}
+
+.profile-role {
+  color: var(--color-accent);
+  font-size: 0.95rem;
+}
+
+.about-title {
+  color: var(--color-heading);
+}
+
+.about-bio {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   10. Bootstrap Badge Overrides (Aksen & Netral)
+   ========================================================================== */
+/* Badge Aksen (Keahlian Utama yang Ditonjolkan) */
+.badge-accent,
+.custom-skill-badge {
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid rgba(235, 94, 40, 0.28);
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.badge-accent:hover,
+.custom-skill-badge:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+/* Badge Netral (Teknologi di kartu & kategori hierarki) */
+.badge.bg-secondary-subtle,
+.badge-neutral {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-weight: 500;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.badge.bg-dark-subtle {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.custom-category-badge {
+  background-color: var(--color-heading);
+  color: var(--color-text-light);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+}
+
+/* Daftar Identitas */
+.identity-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+  display: block;
+}
+
+.identity-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.identity-value a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.identity-value a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Garis Pemisah Kolom Responsif */
+@media (min-width: 768px) {
+  .border-start-md {
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+/* ==========================================================================
+   11. Banners Kartu Proyek & Galeri Keahlian
+   ========================================================================== */
+.project-card-banner {
+  min-height: 80px;
+}
+
+.project-banner-1 {
+  background: linear-gradient(135deg, #252422 0%, #403D39 100%);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.project-banner-2 {
+  background: linear-gradient(135deg, #403D39 0%, #252422 100%);
+  border-bottom: 3px solid #CCC5B9;
+}
+
+.project-banner-3 {
+  background: linear-gradient(135deg, #252422 0%, #5C2A18 100%);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.project-banner-4 {
+  background: linear-gradient(135deg, #403D39 0%, #252422 100%);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.project-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(255, 252, 242, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.project-banner-2 .project-icon-box {
+  color: #CCC5B9;
+}
+
+.project-banner-3 .project-icon-box,
+.project-banner-4 .project-icon-box {
+  color: var(--color-accent);
+}
+
+.skills-ordered-list .list-group-item {
+  border-bottom: 1px solid rgba(204, 197, 185, 0.35);
+}
+
+.skills-ordered-list .list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   12. Bootstrap Modal Overrides (Header Gelap & Kontras Tinggi)
+   ========================================================================== */
+div.modal-content {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+div.modal-content .modal-header {
+  background-color: var(--color-heading);
+  border-bottom: 1px solid rgba(204, 197, 185, 0.2);
+  color: var(--color-text-light);
+  padding: 1.25rem 1.5rem;
+}
+
+div.modal-content .modal-header .modal-title {
+  color: var(--color-text-light);
+  font-weight: 700;
+}
+
+div.modal-content .modal-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+div.modal-content .modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+div.modal-content .modal-body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  padding: 1.75rem 1.5rem;
+}
+
+div.modal-content .modal-footer {
+  background-color: var(--color-surface-subtle);
+  border-top: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+}
+
+/* ==========================================================================
+   13. Formulir Interaktif & Aksesibilitas (WCAG 2.2 AA)
+   ========================================================================== */
+.contact-form {
+  margin-top: 1.5rem;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-surface);
+}
+
+legend {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding: 0 8px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 0.4rem;
+}
+
+.req {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Form Controls & Focus Ring Overrides (Tanpa Warna Biru Default) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea,
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3.5px var(--color-accent-focus);
+}
+
+small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+}
+
+/* Input Group & Floating Label Custom Styling */
+.input-group-text {
+  background-color: var(--color-surface-subtle);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-accent);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.input-group > .form-floating > .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-floating > label {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Radio Button Toggle Group (.btn-outline-custom) */
+.btn-outline-custom {
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-heading);
+}
+
+.btn-check:checked + .btn-outline-custom {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-light);
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(235, 94, 40, 0.25);
+}
+
+/* Form Checkbox & Radio Controls */
+.form-check-input {
+  margin-top: 3px;
+  accent-color: var(--color-accent);
+  border-color: var(--color-border);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.form-check-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-focus);
+}
+
+/* Validation Feedback (Rustic Natural Palette) */
+.valid-feedback {
+  color: #2D6A4F;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.invalid-feedback {
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+  border-color: #2D6A4F;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+  border-color: var(--color-accent);
+}
+
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   14. Aside & Footer
+   ========================================================================== */
+aside {
+  max-width: 1000px;
+  margin: 0 auto 2.5rem auto;
+  padding: 1.75rem 2rem;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+aside:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-subtle);
+}
+
+aside h3 {
+  color: var(--color-heading);
+}
+
+aside p, aside li {
+  color: var(--color-text);
+}
+
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem 1.5rem;
+  background-color: var(--color-heading);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  text-align: center;
+  color: var(--color-text-light-muted);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-md);
+}
+
+footer p {
+  margin-bottom: 0.4rem;
+  color: var(--color-text-light);
+}
+
+footer p:nth-child(2) {
+  color: var(--color-text-light-muted);
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   15. Desain Responsif (Media Query @media (max-width: 768px))
+   ========================================================================== */
+@media (max-width: 768px) {
+  header .custom-navbar .navbar-collapse {
+    background-color: var(--color-heading);
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(204, 197, 185, 0.15);
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  main {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  section {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .profile-banner {
+    height: 56px;
+  }
+
+  .profile-avatar {
+    width: 68px;
+    height: 68px;
+    font-size: 1.3rem;
+    margin-top: -34px;
+    border-width: 3.5px;
+  }
+
+  .profile-header {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+
+  .profile-name {
+    font-size: 1.3rem;
+  }
+
+  .border-start-md {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .identity-list {
+    gap: 0.85rem;
+  }
+
+  fieldset {
+    padding: 1rem 0.85rem;
+  }
+
+  .sub-fieldset label {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .sub-fieldset label:last-child {
+    margin-bottom: 0;
+  }
+
+  aside {
+    margin: 0 1rem 2rem 1rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  footer {
+    padding: 1.75rem 1rem 2.5rem 1rem;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  footer nav ul {
+    gap: 1rem;
+  }
+}
+
+/* ==========================================================================
+   16. Aksesibilitas: Dukungan prefers-reduced-motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}

@@ -4,256 +4,576 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio Profil - Michael Pratama Nasution (12S24003)</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap 5.3.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS Overrides (dimuat SETELAH Bootstrap CSS) -->
+  <link rel="stylesheet" href="custom-style.css">
 </head>
 <body>
 
-  <!-- ==================== HEADER & NAVIGASI ==================== -->
-  <!-- Bagian header memuat logo, nama pengembang, dan menu navigasi primer -->
+  <!-- ==================== HEADER & NAVBAR BOOTSTRAP ==================== -->
   <header>
-    <div class="header-brand">
-      <h1>Michael Pratama Nasution</h1>
-      <p>Mahasiswa Sistem Informasi &bull; Institut Teknologi Del</p>
-    </div>
-
-    <nav aria-label="Navigasi Utama">
-      <ul>
-        <li><a href="#tentang">Tentang Saya</a></li>
-        <li><a href="#portofolio">Portofolio Karya</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar" aria-label="Navigasi Utama">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          Michael Pratama Nasution<span class="brand-accent">.Dev</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Buka menu navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
+          <ul class="navbar-nav gap-lg-1 py-2 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#tentang">Tentang Saya</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portofolio">Portofolio Karya</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
+
+  <!-- ==================== HERO SECTION (MODERN & CLASSY) ==================== -->
+  <section id="hero" class="hero-section text-light">
+    <div class="container py-5">
+      <div class="row align-items-center py-lg-4 g-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <div class="hero-badge mb-3 d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill">
+            <span class="status-indicator"></span>
+            <span class="small fw-semibold">Tersedia untuk Kolaborasi &amp; Konsultasi</span>
+          </div>
+          <h1 class="hero-title display-4 fw-bold mb-3">Michael Pratama Nasution</h1>
+          <p class="hero-subtitle fs-5 fw-semibold mb-3">
+            Full-stack Web Developer &mdash; Mahasiswa Sistem Informasi, Institut Teknologi Del
+          </p>
+          <p class="hero-tagline lead fs-6 mb-4">
+            Berdedikasi merancang antarmuka web modern yang responsif, estetis, dan aksesibel, serta membangun arsitektur backend dan basis data yang efisien dan andal.
+          </p>
+          <div class="hero-cta d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <a href="#portofolio" class="btn btn-hero-primary btn-lg">
+              <i class="bi bi-folder-check me-2"></i>Lihat Portofolio
+            </a>
+            <a href="#kontak" class="btn btn-hero-outline btn-lg">
+              <i class="bi bi-chat-dots me-2"></i>Hubungi Saya
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+          <div class="hero-profile-card p-4 rounded-4 text-center">
+            <div class="hero-avatar mx-auto mb-3" aria-hidden="true">MP</div>
+            <h2 class="h5 mb-1 text-white fw-bold">Michael Pratama Nasution</h2>
+            <p class="small text-accent mb-3">12S24003 &bull; S1 Sistem Informasi</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <span class="hero-skill-chip">Full-stack</span>
+              <span class="hero-skill-chip">UI/UX</span>
+              <span class="hero-skill-chip">Database</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ==================== KONTEN INTI (MAIN) ==================== -->
   <!-- Bagian main memuat konten utama halaman web -->
   <main>
 
     <!-- Section 1: Tentang Saya (Profil Profesional & Identitas) -->
-    <section id="tentang" aria-label="Tentang Saya">
+    <section id="tentang" aria-label="Tentang Saya" class="card shadow-sm rounded-4 overflow-hidden border-0">
       <!-- 1. Bagian Atas: Banner Tipis Polos & Avatar Inisial -->
       <div class="profile-banner"></div>
 
-      <div class="profile-header">
-        <div class="profile-avatar" aria-label="Avatar Inisial Profil Michael Pratama Nasution">MP</div>
-        <h2 class="profile-name">Michael Pratama Nasution</h2>
-        <p class="profile-role">Full-stack Web Developer</p>
+      <div class="profile-header text-center pb-2">
+        <div class="profile-avatar mx-auto" aria-label="Avatar Inisial Profil Michael Pratama Nasution">MP</div>
+        <h2 class="profile-name h3 fw-bold mb-1">Michael Pratama Nasution</h2>
+        <p class="profile-role fw-semibold mb-0">Full-stack Web Developer</p>
       </div>
 
-      <!-- 2. Bagian Bawah: Dua Kolom (Bio + Skill Pills di Kiri, Identitas di Kanan) -->
-      <div class="profile-body">
-        <!-- Kolom Kiri: Bio & Skill Badges -->
-        <div class="profile-bio-col">
-          <h3 class="about-title">Tentang Saya</h3>
-          <p>
-            Saya adalah mahasiswa Program Studi Sarjana Sistem Informasi di Institut Teknologi Del yang memiliki minat mendalam pada pengembangan web <em>full-stack</em>. Berfokus pada perancangan antarmuka pengguna yang modern, responsif, dan aksesibel, serta pembangunan arsitektur <em>backend</em> dan basis data yang efisien dan terstruktur. Selalu antusias memadukan estetika visual antarmuka dengan performa sistem web yang andal.
-          </p>
+      <!-- 2. Bagian Bawah: Dua Kolom Grid Bootstrap -->
+      <div class="card-body p-4 p-lg-5 border-top">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <!-- Kolom Kiri: Bio & Skill Badges (col-lg-8 / col-md-7) -->
+          <div class="col-lg-8 col-md-7">
+            <h3 class="about-title h4 fw-bold mb-3">Tentang Saya</h3>
+            <p class="about-bio mb-4">
+              Saya adalah mahasiswa Program Studi Sarjana Sistem Informasi di Institut Teknologi Del yang memiliki minat mendalam pada pengembangan web <em>full-stack</em>. Berfokus pada perancangan antarmuka pengguna yang modern, responsif, dan aksesibel, serta pembangunan arsitektur <em>backend</em> dan basis data yang efisien dan terstruktur. Selalu antusias memadukan estetika visual antarmuka dengan performa sistem web yang andal.
+            </p>
 
-          <!-- Pill Badges untuk Keahlian Utama -->
-          <div class="skill-pills" aria-label="Keahlian Utama">
-            <span class="skill-pill">Full-stack</span>
-            <span class="skill-pill">UI/UX</span>
-            <span class="skill-pill">Database</span>
-            <span class="skill-pill">PHP &amp; Laravel</span>
-            <span class="skill-pill">React.js</span>
-            <span class="skill-pill">Node.js</span>
+            <!-- Badge Keahlian Utama (Komponen Bootstrap Badge .badge.rounded-pill) -->
+            <div class="d-flex flex-wrap gap-2" aria-label="Keahlian Utama">
+              <span class="badge rounded-pill custom-skill-badge">Full-stack</span>
+              <span class="badge rounded-pill custom-skill-badge">UI/UX</span>
+              <span class="badge rounded-pill custom-skill-badge">Database</span>
+              <span class="badge rounded-pill custom-skill-badge">PHP &amp; Laravel</span>
+              <span class="badge rounded-pill custom-skill-badge">React.js</span>
+              <span class="badge rounded-pill custom-skill-badge">Node.js</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Kolom Kanan: Daftar Identitas Vertikal Rapi -->
-        <div class="profile-info-col">
-          <ul class="identity-list">
-            <li class="identity-item">
-              <span class="identity-label">NIM</span>
-              <span class="identity-value">12S24003</span>
-            </li>
-            <li class="identity-item">
-              <span class="identity-label">Institusi</span>
-              <span class="identity-value">Institut Teknologi Del</span>
-            </li>
-            <li class="identity-item">
-              <span class="identity-label">Program Studi</span>
-              <span class="identity-value">S1 Sistem Informasi</span>
-            </li>
-            <li class="identity-item">
-              <span class="identity-label">Lokasi</span>
-              <span class="identity-value">Sitoluama, Laguboti, Toba</span>
-            </li>
-            <li class="identity-item">
-              <span class="identity-label">Email</span>
-              <span class="identity-value">
-                <a href="mailto:michael.nasution@del.ac.id">michael.nasution@del.ac.id</a>
-              </span>
-            </li>
-          </ul>
+          <!-- Kolom Kanan: Daftar Identitas Vertikal (col-lg-4 / col-md-5) -->
+          <div class="col-lg-4 col-md-5 border-start-md ps-md-4 ps-lg-5">
+            <ul class="list-group list-group-flush bg-transparent">
+              <li class="list-group-item bg-transparent px-0 py-2 border-0">
+                <span class="identity-label">NIM</span>
+                <span class="identity-value">12S24003</span>
+              </li>
+              <li class="list-group-item bg-transparent px-0 py-2 border-0">
+                <span class="identity-label">Institusi</span>
+                <span class="identity-value">Institut Teknologi Del</span>
+              </li>
+              <li class="list-group-item bg-transparent px-0 py-2 border-0">
+                <span class="identity-label">Program Studi</span>
+                <span class="identity-value">S1 Sistem Informasi</span>
+              </li>
+              <li class="list-group-item bg-transparent px-0 py-2 border-0">
+                <span class="identity-label">Lokasi</span>
+                <span class="identity-value">Sitoluama, Laguboti, Toba</span>
+              </li>
+              <li class="list-group-item bg-transparent px-0 py-2 border-0">
+                <span class="identity-label">Email</span>
+                <span class="identity-value">
+                  <a href="mailto:michael.nasution@del.ac.id">michael.nasution@del.ac.id</a>
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Section 2: Portofolio Karya -->
-    <!-- Menampilkan karya/proyek (Cashflow Website dll.) dan tabel rekapitulasi proyek -->
-    <section id="portofolio">
-      <h2>Portofolio Karya</h2>
-      <p>
-        Berikut adalah rekapitulasi riwayat proyek pengembangan perangkat lunak dan kegiatan teknologi yang telah saya kerjakan:
-      </p>
-
-      <!-- Pembungkus Tabel Responsif untuk Layar Mobile -->
-      <div class="table-responsive">
-        <table>
-          <caption>Rekapitulasi Riwayat Proyek &amp; Capaian Teknologi</caption>
-          <thead>
-            <tr>
-              <th scope="col">No</th>
-              <th scope="col">Nama Proyek / Kegiatan</th>
-              <th scope="col">Deskripsi Singkat</th>
-              <th scope="col">Teknologi</th>
-              <th scope="col">Tahun</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td><strong>Cashflow Website</strong></td>
-              <td>Sistem manajemen keuangan berbasis web untuk pelacakan pemasukan (income), pengeluaran (expense), dan analisis arus kas (cashflow).</td>
-              <td>React.js, Node.js, PHP, MySQL</td>
-              <td>2025</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td><strong>Bot Pelaporan Telegram</strong></td>
-              <td>Bot otomatisasi berbasis pesan instan untuk memfasilitasi pelaporan berkala dan notifikasi tugas akademik terintegrasi.</td>
-              <td>Node.js, Telegram Bot API, MySQL</td>
-              <td>2025</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td><strong>Kandidat Proyek GEMASTIK Web</strong></td>
-              <td>Pengembangan prototipe sistem web interaktif bertema solusi digital berkelanjutan untuk persiapan seleksi lomba GEMASTIK.</td>
-              <td>PHP, Laravel, MySQL</td>
-              <td>2025</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th scope="row" colspan="4">Total Proyek / Kegiatan Tercatat</th>
-              <td>3 Proyek</td>
-            </tr>
-          </tfoot>
-        </table>
+    <section id="portofolio" aria-label="Portofolio Karya">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+        <div>
+          <h2>Portofolio Karya</h2>
+          <p class="mb-0">
+            Berikut adalah rekapitulasi riwayat proyek pengembangan perangkat lunak dan kegiatan teknologi yang telah saya kerjakan:
+          </p>
+        </div>
       </div>
 
-      <!-- Wadah Grid untuk Detail Proyek & Galeri Keahlian -->
-      <div class="portfolio-grid">
-        <!-- Detail Sorotan Proyek Utama (List Tidak Berurutan / ul) -->
-        <article class="project-detail">
-          <h3>Sorotan Proyek: Cashflow Website</h3>
-          <p>
-            Sistem manajemen keuangan berbasis web yang dirancang untuk tracking income, expense, dan analisis cashflow secara terpadu. Cakupan pengerjaan proyek ini meliputi:
-          </p>
-          <ul class="project-features">
-            <li>Frontend Development dengan React.js</li>
-            <li>Backend Development dengan Node.js dan PHP</li>
-            <li>Integrasi Database untuk data transaksi</li>
-            <li>API Development &amp; Testing dengan Postman</li>
-            <li>UI/UX Design dengan HTML, CSS, JavaScript</li>
-          </ul>
-        </article>
+      <!-- Grid Kartu Proyek Bootstrap -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
 
-        <!-- Galeri Keahlian Teknis (List Berurutan / ol) -->
-        <article class="skills-showcase">
-          <h3>Galeri Keahlian Teknis</h3>
-          <p>
+        <!-- Card 1: Cashflow Website -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden project-card">
+            <div class="project-card-banner project-banner-1 d-flex align-items-center justify-content-between p-3 text-white">
+              <span class="project-icon-box"><i class="bi bi-wallet2 fs-4"></i></span>
+              <span class="badge bg-white bg-opacity-25 text-white px-2 py-1 rounded-pill small">2025</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title h5 fw-bold mb-2">Cashflow Website</h3>
+              <p class="card-text text-body-secondary small flex-grow-1 mb-3">
+                Sistem manajemen keuangan berbasis web untuk pelacakan pemasukan (income), pengeluaran (expense), dan analisis arus kas (cashflow).
+              </p>
+              <div class="project-tech-badges d-flex flex-wrap gap-1 mb-3" aria-label="Teknologi yang digunakan">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">React.js</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">Node.js</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">PHP</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+              <button type="button" class="btn btn-sm btn-outline-accent w-100 rounded-3" data-bs-toggle="modal" data-bs-target="#modalCashflow">
+                <i class="bi bi-info-circle me-1"></i> Lihat Detail
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Bot Pelaporan Telegram -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden project-card">
+            <div class="project-card-banner project-banner-2 d-flex align-items-center justify-content-between p-3 text-white">
+              <span class="project-icon-box"><i class="bi bi-telegram fs-4"></i></span>
+              <span class="badge bg-white bg-opacity-25 text-white px-2 py-1 rounded-pill small">2025</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title h5 fw-bold mb-2">Bot Pelaporan Telegram</h3>
+              <p class="card-text text-body-secondary small flex-grow-1 mb-3">
+                Bot otomatisasi berbasis pesan instan untuk memfasilitasi pelaporan berkala dan notifikasi tugas akademik terintegrasi.
+              </p>
+              <div class="project-tech-badges d-flex flex-wrap gap-1 mb-3" aria-label="Teknologi yang digunakan">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">Node.js</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">Telegram Bot API</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+              <button type="button" class="btn btn-sm btn-outline-accent w-100 rounded-3" data-bs-toggle="modal" data-bs-target="#modalTelegram">
+                <i class="bi bi-info-circle me-1"></i> Lihat Detail
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Kandidat Proyek GEMASTIK Web -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden project-card">
+            <div class="project-card-banner project-banner-3 d-flex align-items-center justify-content-between p-3 text-white">
+              <span class="project-icon-box"><i class="bi bi-trophy fs-4"></i></span>
+              <span class="badge bg-white bg-opacity-25 text-white px-2 py-1 rounded-pill small">2025</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title h5 fw-bold mb-2">Kandidat Proyek GEMASTIK Web</h3>
+              <p class="card-text text-body-secondary small flex-grow-1 mb-3">
+                Pengembangan prototipe sistem web interaktif bertema solusi digital berkelanjutan untuk persiapan seleksi lomba GEMASTIK.
+              </p>
+              <div class="project-tech-badges d-flex flex-wrap gap-1 mb-3" aria-label="Teknologi yang digunakan">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">PHP</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">Laravel</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+              <button type="button" class="btn btn-sm btn-outline-accent w-100 rounded-3" data-bs-toggle="modal" data-bs-target="#modalGemastik">
+                <i class="bi bi-info-circle me-1"></i> Lihat Detail
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Sistem Manajemen Presensi & Inventaris Lab -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden project-card">
+            <div class="project-card-banner project-banner-4 d-flex align-items-center justify-content-between p-3 text-white">
+              <span class="project-icon-box"><i class="bi bi-pc-display fs-4"></i></span>
+              <span class="badge bg-white bg-opacity-25 text-white px-2 py-1 rounded-pill small">2025</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h3 class="card-title h5 fw-bold mb-2">Sistem Presensi &amp; Lab</h3>
+              <p class="card-text text-body-secondary small flex-grow-1 mb-3">
+                Aplikasi web terintegrasi untuk pencatatan presensi praktikum, manajemen peminjaman alat lab, dan pelaporan otomatis.
+              </p>
+              <div class="project-tech-badges d-flex flex-wrap gap-1 mb-3" aria-label="Teknologi yang digunakan">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">PHP</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">Bootstrap 5</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">JavaScript</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+              <button type="button" class="btn btn-sm btn-outline-accent w-100 rounded-3" data-bs-toggle="modal" data-bs-target="#modalInventarisLab">
+                <i class="bi bi-info-circle me-1"></i> Lihat Detail
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Galeri Keahlian Teknis (Di Bawah Grid Kartu Proyek) -->
+      <article class="card shadow-sm border-0 rounded-4 overflow-hidden mt-3" aria-label="Galeri Keahlian Teknis">
+        <div class="card-header bg-transparent p-3 p-md-4 border-bottom">
+          <h3 class="h5 fw-bold mb-1">Galeri Keahlian Teknis</h3>
+          <p class="text-body-secondary small mb-0">
             Daftar hierarki kompetensi utama dalam rekayasa perangkat lunak dan pengembangan web:
           </p>
-          <ol class="skills-list">
-            <li>PHP</li>
-            <li>Laravel</li>
-            <li>Database Management (MySQL)</li>
-            <li>Web Development &amp; UI/UX Optimization</li>
-            <li>Full-stack Web Development (React.js, Node.js, PHP)</li>
-            <li>Database Design</li>
+        </div>
+        <div class="card-body p-3 p-md-4">
+          <ol class="list-group list-group-numbered list-group-flush skills-ordered-list mb-0">
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2 px-0">
+              <span class="ms-2 fw-medium">PHP</span>
+              <span class="badge custom-category-badge rounded-pill">Backend</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2 px-0">
+              <span class="ms-2 fw-medium">Laravel</span>
+              <span class="badge custom-category-badge rounded-pill">Framework</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2 px-0">
+              <span class="ms-2 fw-medium">Database Management (MySQL)</span>
+              <span class="badge custom-category-badge rounded-pill">Database</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2 px-0">
+              <span class="ms-2 fw-medium">Web Development &amp; UI/UX Optimization</span>
+              <span class="badge custom-category-badge rounded-pill">Frontend</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2 px-0">
+              <span class="ms-2 fw-medium">Full-stack Web Development (React.js, Node.js, PHP)</span>
+              <span class="badge custom-category-badge rounded-pill">Full-Stack</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2 px-0">
+              <span class="ms-2 fw-medium">Database Design</span>
+              <span class="badge custom-category-badge rounded-pill">Architecture</span>
+            </li>
           </ol>
-        </article>
+        </div>
+      </article>
+
+      <!-- ==================== MODAL DIALOG PROYEK ==================== -->
+
+      <!-- Modal 1: Cashflow Website -->
+      <div class="modal fade" id="modalCashflow" tabindex="-1" aria-labelledby="modalCashflowLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom">
+              <h4 class="modal-title h5 fw-bold" id="modalCashflowLabel">
+                <i class="bi bi-wallet2 text-accent me-2"></i>Sorotan Proyek: Cashflow Website
+              </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body p-4">
+              <p class="mb-3">
+                Sistem manajemen keuangan berbasis web yang dirancang untuk tracking income, expense, dan analisis cashflow secara terpadu. Cakupan pengerjaan proyek ini meliputi:
+              </p>
+              <ul class="mb-4">
+                <li>Frontend Development dengan React.js</li>
+                <li>Backend Development dengan Node.js dan PHP</li>
+                <li>Integrasi Database untuk data transaksi</li>
+                <li>API Development &amp; Testing dengan Postman</li>
+                <li>UI/UX Design dengan HTML, CSS, JavaScript</li>
+              </ul>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">React.js</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">Node.js</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">PHP</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+                </div>
+                <span class="badge bg-dark text-light px-3 py-2 rounded-pill">Tahun: 2025</span>
+              </div>
+            </div>
+            <div class="modal-footer border-top">
+              <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Modal 2: Bot Pelaporan Telegram -->
+      <div class="modal fade" id="modalTelegram" tabindex="-1" aria-labelledby="modalTelegramLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom">
+              <h4 class="modal-title h5 fw-bold" id="modalTelegramLabel">
+                <i class="bi bi-telegram text-accent me-2"></i>Detail Proyek: Bot Pelaporan Telegram
+              </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body p-4">
+              <p class="mb-3">
+                Bot otomatisasi berbasis pesan instan untuk memfasilitasi pelaporan berkala dan notifikasi tugas akademik terintegrasi. Cakupan pengerjaan proyek ini meliputi:
+              </p>
+              <ul class="mb-4">
+                <li>Otomatisasi pengiriman notifikasi pengingat tugas akademik perkuliahan</li>
+                <li>Integrasi Telegram Bot API dengan backend Node.js</li>
+                <li>Pengelolaan log pelaporan dan persistensi data dengan basis data MySQL</li>
+                <li>Penyusunan jadwal otomatisasi pengingat berkala untuk efisiensi tim</li>
+              </ul>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">Node.js</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">Telegram Bot API</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+                </div>
+                <span class="badge bg-dark text-light px-3 py-2 rounded-pill">Tahun: 2025</span>
+              </div>
+            </div>
+            <div class="modal-footer border-top">
+              <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3: Kandidat Proyek GEMASTIK Web -->
+      <div class="modal fade" id="modalGemastik" tabindex="-1" aria-labelledby="modalGemastikLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom">
+              <h4 class="modal-title h5 fw-bold" id="modalGemastikLabel">
+                <i class="bi bi-trophy text-accent me-2"></i>Detail Proyek: Kandidat Proyek GEMASTIK Web
+              </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body p-4">
+              <p class="mb-3">
+                Pengembangan prototipe sistem web interaktif bertema solusi digital berkelanjutan untuk persiapan seleksi lomba GEMASTIK di Institut Teknologi Del. Cakupan pengerjaan proyek ini meliputi:
+              </p>
+              <ul class="mb-4">
+                <li>Perancangan arsitektur MVC berbasis framework PHP &amp; Laravel</li>
+                <li>Desain dan pemodelan basis data relasional menggunakan MySQL</li>
+                <li>Pembuatan antarmuka pengguna interaktif dan responsif</li>
+                <li>Penyusunan prototipe solusi digital untuk seleksi kompetisi GEMASTIK Web Development</li>
+              </ul>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">PHP</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">Laravel</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+                </div>
+                <span class="badge bg-dark text-light px-3 py-2 rounded-pill">Tahun: 2025</span>
+              </div>
+            </div>
+            <div class="modal-footer border-top">
+              <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4: Sistem Manajemen Presensi & Inventaris Lab -->
+      <div class="modal fade" id="modalInventarisLab" tabindex="-1" aria-labelledby="modalInventarisLabLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom">
+              <h4 class="modal-title h5 fw-bold" id="modalInventarisLabLabel">
+                <i class="bi bi-pc-display text-accent me-2"></i>Detail Proyek: Sistem Presensi &amp; Inventaris Lab
+              </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body p-4">
+              <p class="mb-3">
+                Sistem informasi berbasis web yang dikembangkan untuk mengelola presensi mahasiswa dalam sesi praktikum dan melacak inventaris perangkat keras laboratorium komputer di Institut Teknologi Del. Cakupan pengerjaan proyek ini meliputi:
+              </p>
+              <ul class="mb-4">
+                <li>Desain antarmuka pengguna responsif menggunakan Bootstrap 5 dan JavaScript vanilla</li>
+                <li>Pengelolaan CRUD inventaris perangkat laboratorium dan riwayat peminjaman alat</li>
+                <li>Implementasi autentikasi multi-role (Asisten Dosen, Mahasiswa, dan Teknisi Lab)</li>
+                <li>Pembuatan modul rekapitulasi kehadiran dan ekspor laporan berkala ke format spreadsheet</li>
+              </ul>
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">PHP</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">MySQL</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">Bootstrap 5</span>
+                  <span class="badge bg-secondary-subtle text-secondary-emphasis">JavaScript</span>
+                </div>
+                <span class="badge bg-dark text-light px-3 py-2 rounded-pill">Tahun: 2025</span>
+              </div>
+            </div>
+            <div class="modal-footer border-top">
+              <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- Section 3: Kontak & Layanan -->
     <!-- Menampilkan formulir kontak/konsultasi layanan interaktif & accessible -->
-    <section id="kontak">
+    <section id="kontak" aria-label="Kontak &amp; Formulir Layanan">
       <h2>Kontak &amp; Formulir Layanan</h2>
       <p>
         Silakan lengkapi formulir di bawah ini untuk mengajukan pertanyaan, konsultasi teknis, atau penawaran kolaborasi proyek web:
       </p>
 
-      <form action="#" method="POST" class="contact-form">
+      <form action="#" method="POST" class="contact-form needs-validation" novalidate id="consultationForm">
         <!-- Fieldset 1: Data Identitas Pengirim -->
-        <fieldset>
-          <legend>Data Identitas Diri</legend>
+        <fieldset class="mb-4">
+          <legend class="fw-bold mb-3">Data Identitas Diri</legend>
 
-          <div class="form-group">
-            <label for="nama">Nama Lengkap <span class="req">*</span></label>
-            <input type="text" id="nama" name="nama" required placeholder="Contoh: Michael Pratama Nasution">
+          <!-- Input 1: Nama Lengkap (Floating Label) -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nama" name="nama" required placeholder="Contoh: Michael Pratama Nasution">
+            <label for="nama"><i class="bi bi-person me-1"></i>Nama Lengkap <span class="req">*</span></label>
+            <div class="invalid-feedback">Silakan masukkan nama lengkap Anda.</div>
+            <div class="valid-feedback">Terlihat baik!</div>
           </div>
 
-          <div class="form-group">
-            <label for="email">Alamat Email <span class="req">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="nama@domain.com" aria-describedby="email-help">
-            <small id="email-help">Email aktif untuk pengiriman balasan resmi.</small>
+          <!-- Input 2: Alamat Email (Input Group + Floating Label) -->
+          <div class="mb-3">
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" name="email" required placeholder="nama@domain.com" aria-describedby="email-help">
+                <label for="email">Alamat Email <span class="req">*</span></label>
+              </div>
+              <div class="invalid-feedback">Silakan masukkan alamat email yang valid.</div>
+              <div class="valid-feedback">Terlihat baik!</div>
+            </div>
+            <small id="email-help" class="form-text mt-1 text-body-secondary">Email aktif untuk pengiriman balasan resmi.</small>
           </div>
 
-          <div class="form-group">
-            <label for="telepon">Nomor Telepon / WhatsApp <span class="req">*</span></label>
-            <input type="tel" id="telepon" name="telepon" required placeholder="Contoh: 081234567890">
+          <!-- Input 3: Nomor Telepon / WhatsApp (Input Group + Floating Label) -->
+          <div class="input-group has-validation mb-2">
+            <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+            <div class="form-floating">
+              <input type="tel" class="form-control" id="telepon" name="telepon" required placeholder="Contoh: 081234567890">
+              <label for="telepon">Nomor Telepon / WhatsApp <span class="req">*</span></label>
+            </div>
+            <div class="invalid-feedback">Silakan masukkan nomor telepon atau WhatsApp yang dapat dihubungi.</div>
+            <div class="valid-feedback">Terlihat baik!</div>
           </div>
         </fieldset>
 
         <!-- Fieldset 2: Detail Permintaan & Pesan -->
-        <fieldset>
-          <legend>Detail Permintaan &amp; Pesan</legend>
+        <fieldset class="mb-4">
+          <legend class="fw-bold mb-3">Detail Permintaan &amp; Pesan</legend>
 
-          <div class="form-group">
-            <label for="kategori">Topik / Kategori Layanan <span class="req">*</span></label>
-            <select id="kategori" name="kategori" required>
-              <option value="">-- Pilih Topik Layanan --</option>
+          <!-- Select: Topik / Kategori Layanan (Floating Label + form-select) -->
+          <div class="form-floating mb-3">
+            <select class="form-select" id="kategori" name="kategori" required aria-label="Pilih Topik Layanan">
+              <option value="" selected disabled>-- Pilih Topik Layanan --</option>
               <option value="frontend">Frontend Engineering &amp; UI/UX</option>
               <option value="backend">Backend &amp; Cloud Architecture</option>
               <option value="database">Database Design &amp; Optimization</option>
               <option value="fullstack">Full-stack Web Development</option>
               <option value="lainnya">Konsultasi Umum / Lainnya</option>
             </select>
+            <label for="kategori"><i class="bi bi-tag me-1"></i>Topik / Kategori Layanan <span class="req">*</span></label>
+            <div class="invalid-feedback">Silakan pilih salah satu kategori layanan.</div>
+            <div class="valid-feedback">Terlihat baik!</div>
           </div>
 
-          <div class="form-group">
-            <label for="durasi">Estimasi Waktu Proyek (dalam pekan)</label>
-            <input type="number" id="durasi" name="durasi" min="1" max="52" placeholder="Contoh: 4">
+          <!-- Input: Estimasi Waktu Proyek (Floating Label) -->
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="durasi" name="durasi" min="1" max="52" placeholder="Contoh: 4">
+            <label for="durasi"><i class="bi bi-calendar-week me-1"></i>Estimasi Waktu Proyek (dalam pekan)</label>
+            <div class="valid-feedback">Opsional, terlihat baik!</div>
           </div>
 
-          <div class="form-group">
-            <fieldset class="sub-fieldset">
-              <legend>Jenis Kebutuhan <span class="req">*</span></legend>
-              <label for="tipe-konsultasi">
-                <input type="radio" id="tipe-konsultasi" name="tipe_layanan" value="konsultasi" required checked> Konsultasi Akademik / Teknis
-              </label>
-              <label for="tipe-kolaborasi">
-                <input type="radio" id="tipe-kolaborasi" name="tipe_layanan" value="kolaborasi"> Kolaborasi Proyek Web
-              </label>
-            </fieldset>
-          </div>
-
-          <div class="form-group">
-            <label for="pesan">Deskripsi Pesan / Kebutuhan <span class="req">*</span></label>
-            <textarea id="pesan" name="pesan" rows="4" required placeholder="Tuliskan rincian kebutuhan atau pertanyaan Anda di sini..."></textarea>
-          </div>
-
-          <div class="form-group form-checkbox">
-            <label for="persetujuan">
-              <input type="checkbox" id="persetujuan" name="persetujuan" required> Saya mengonfirmasi data yang diisi sudah benar dan dapat digunakan untuk komunikasi profesional. <span class="req">*</span>
+          <!-- Radio: Jenis Kebutuhan (Modern Toggle Button Group) -->
+          <div class="mb-3">
+            <label class="form-label d-block fw-semibold mb-2">
+              <i class="bi bi-briefcase me-1"></i>Jenis Kebutuhan <span class="req">*</span>
             </label>
+            <div class="btn-group w-100 role-toggle flex-wrap flex-sm-nowrap" role="group" aria-label="Jenis Kebutuhan">
+              <input type="radio" class="btn-check" name="tipe_layanan" id="tipe-konsultasi" value="konsultasi" required checked autocomplete="off">
+              <label class="btn btn-outline-custom py-2 flex-fill" for="tipe-konsultasi">
+                <i class="bi bi-mortarboard me-1"></i> Konsultasi Akademik / Teknis
+              </label>
+
+              <input type="radio" class="btn-check" name="tipe_layanan" id="tipe-kolaborasi" value="kolaborasi" autocomplete="off">
+              <label class="btn btn-outline-custom py-2 flex-fill" for="tipe-kolaborasi">
+                <i class="bi bi-people me-1"></i> Kolaborasi Proyek Web
+              </label>
+            </div>
+          </div>
+
+          <!-- Textarea: Deskripsi Pesan / Kebutuhan (Floating Label) -->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="pesan" name="pesan" style="height: 130px" required placeholder="Tuliskan rincian kebutuhan atau pertanyaan Anda di sini..."></textarea>
+            <label for="pesan"><i class="bi bi-chat-left-text me-1"></i>Deskripsi Pesan / Kebutuhan <span class="req">*</span></label>
+            <div class="invalid-feedback">Silakan tuliskan rincian kebutuhan atau pertanyaan Anda.</div>
+            <div class="valid-feedback">Terlihat baik!</div>
+          </div>
+
+          <!-- Checkbox: Konfirmasi (form-check standar Bootstrap) -->
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="persetujuan" name="persetujuan" required>
+            <label class="form-check-label small" for="persetujuan">
+              Saya mengonfirmasi data yang diisi sudah benar dan dapat digunakan untuk komunikasi profesional. <span class="req">*</span>
+            </label>
+            <div class="invalid-feedback">Anda wajib menyetujui konfirmasi ini sebelum mengirim formulir.</div>
+            <div class="valid-feedback">Persetujuan terkonfirmasi!</div>
           </div>
         </fieldset>
 
-        <button type="submit" class="btn-submit">Kirim Permintaan Konsultasi</button>
+        <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold">
+          <i class="bi bi-send-fill me-2"></i>Kirim Permintaan Konsultasi
+        </button>
       </form>
     </section>
 
@@ -286,5 +606,24 @@
     </nav>
   </footer>
 
+  <!-- Bootstrap 5.3.3 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Script Validasi Formulir Bootstrap 5 -->
+  <script>
+    (() => {
+      'use strict';
+      const form = document.getElementById('consultationForm');
+      if (form) {
+        form.addEventListener('submit', (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      }
+    })();
+  </script>
 </body>
 </html>
