@@ -1,0 +1,50 @@
+[
+  {
+    "id": "p1",
+    "title": "Cashflow Website",
+    "description": "Aplikasi manajemen arus kas berbasis web untuk memudahkan pencatatan keuangan.",
+    "category": "Web",
+    "tags": ["React.js", "Node.js", "PHP", "MySQL"],
+    "thumbnail": "bi-cash-coin",
+    "metrics": {
+      "year": 2025
+    },
+    "link": "#"
+  },
+  {
+    "id": "p2",
+    "title": "Bot Pelaporan Telegram",
+    "description": "Bot otomatis untuk mengelola pelaporan dan notifikasi secara terintegrasi via Telegram.",
+    "category": "Automation",
+    "tags": ["Node.js", "Telegram Bot API", "MySQL"],
+    "thumbnail": "bi-telegram",
+    "metrics": {
+      "year": 2025
+    },
+    "link": "#"
+  },
+  {
+    "id": "p3",
+    "title": "Kandidat Proyek GEMASTIK Web",
+    "description": "Proyek inovasi dan kompetisi di bidang pengembangan web untuk perlombaan GEMASTIK.",
+    "category": "Web",
+    "tags": ["PHP", "Laravel", "MySQL"],
+    "thumbnail": "bi-trophy",
+    "metrics": {
+      "year": 2025
+    },
+    "link": "#"
+  },
+  {
+    "id": "p4",
+    "title": "Sistem Presensi & Lab",
+    "description": "Sistem informasi terintegrasi untuk absensi kehadiran dan manajemen operasional laboratorium.",
+    "category": "Web",
+    "tags": ["PHP", "MySQL", "Bootstrap 5", "JavaScript"],
+    "thumbnail": "bi-building-check",
+    "metrics": {
+      "year": 2025
+    },
+    "link": "#"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "Michael Pratama Nasution",
+  "nim": "12S24003",
+  "prodi": "S1 Sistem Informasi",
+  "institusi": "Institut Teknologi Del",
+  "lokasi": "Sitoluama Laguboti Toba",
+  "email": "michael.nasution@del.ac.id",
+  "bio": "full-stack developer",
+  "skills": [
+    "Full-stack",
+    "UI/UX",
+    "Database",
+    "PHP & Laravel",
+    "React.js",
+    "Node.js"
+  ],
+  "statistics": {
+    "totalProjects": 4,
+    "yearsOfStudy": 2
+  }
+}

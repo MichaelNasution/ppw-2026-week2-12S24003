@@ -1,0 +1,32 @@
+[
+  {
+    "id": "s1",
+    "name": "Konsultasi Akademik / Teknis",
+    "price": "Mulai Rp200.000",
+    "features": [
+      "Diskusi teknis terarah",
+      "Review kode sumber (Code Review)",
+      "Saran arsitektur sistem"
+    ]
+  },
+  {
+    "id": "s2",
+    "name": "Kolaborasi Proyek Web",
+    "price": "Hubungi untuk penawaran",
+    "features": [
+      "Pengembangan fitur baru",
+      "Integrasi API eksternal",
+      "Deployment ke Cloud/Server"
+    ]
+  },
+  {
+    "id": "s3",
+    "name": "Full-stack Development Package",
+    "price": "Mulai Rp1.000.000",
+    "features": [
+      "Pembuatan Frontend & Backend",
+      "Perancangan Database optimal",
+      "Testing & Optimization performa"
+    ]
+  }
+]
