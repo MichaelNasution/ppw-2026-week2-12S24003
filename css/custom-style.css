@@ -300,6 +300,14 @@ header .custom-navbar button.navbar-toggler:focus {
   transform: translateY(-2px);
 }
 
+.btn-outline-accent {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
 .btn-outline-accent:hover,
 .btn-outline-accent:focus {
   background-color: var(--color-accent);

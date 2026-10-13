@@ -1,7 +1,7 @@
 # 🌟 Portofolio Profil Web Modern - Michael Pratama Nasution
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=252422&height=200&section=header&text=Portofolio%20Web%20Bootstrap%205&fontSize=40&fontColor=FFFCF2&animation=fadeIn&fontAlignY=38&desc=Praktikum%20PPW%20Minggu%2003%20%E2%80%A2%20Refaktorisasi%20Bootstrap%205.3%20%2B%20Custom%20Overrides&descAlignY=58&descSize=17" alt="Header Banner" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=252422&height=200&section=header&text=Portofolio%20Web%20Decoupled%20CSR&fontSize=38&fontColor=FFFCF2&animation=fadeIn&fontAlignY=38&desc=Praktikum%20PPW%20Minggu%2004%20%E2%80%A2%20Decoupled%20Multi--Tier%20%26%20Dynamic%20CSR&descAlignY=58&descSize=16" alt="Header Banner" width="100%"/>
 </p>
 
 <p align="center">
@@ -13,117 +13,149 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Arsitektur-Decoupled%20Multi--Tier-EB5E28?style=flat-square" alt="Arsitektur"/>
+  <img src="https://img.shields.io/badge/Rendering-Dynamic%20Client--Side%20(CSR)-blue?style=flat-square" alt="CSR"/>
   <img src="https://img.shields.io/badge/Bootstrap-5.3.3%20CDN-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap 5.3"/>
-  <img src="https://img.shields.io/badge/Bootstrap%20Icons-1.11.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap Icons"/>
-  <img src="https://img.shields.io/badge/Custom%20CSS-Rustic%20Charm%20Theme-EB5E28?style=flat-square" alt="Rustic Charm"/>
-  <img src="https://img.shields.io/badge/Aksesibilitas-WCAG%202.2%20AA-success?style=flat-square&logo=w3c&logoColor=white" alt="WCAG AA"/>
-  <img src="https://img.shields.io/badge/Validasi-Bootstrap%20Client--Side-2D6A4F?style=flat-square" alt="Validasi Form"/>
+  <img src="https://img.shields.io/badge/Keamanan-CSP%20%2B%20escapeHTML-success?style=flat-square" alt="Keamanan"/>
+  <img src="https://img.shields.io/badge/Tema-Rustic%20Charm-EB5E28?style=flat-square" alt="Rustic Charm"/>
 </p>
 
 ---
 
 ## 🔗 Tautan Demo Langsung & Repositori
 
-- **Live Demo (GitHub Pages)**: [https://michaelnasution.github.io/ppw-2026-week2-12S24003/](https://michaelnasution.github.io/ppw-2026-week2-12S24003/) *(Aktifkan pada branch `week3-bootstrap`)*
-- **Branch Kerja**: `week3-bootstrap`
+- **Live Demo (GitHub Pages)**: [https://michaelnasution.github.io/ppw-2026-week2-12S24003/](https://michaelnasution.github.io/ppw-2026-week2-12S24003/) *(URL live demo)*
+- **Branch Kerja**: `week4-architecture`
 - **Repositori**: `MichaelNasution/ppw-2026-week2-12S24003`
 
 ---
 
-## 📌 Ringkasan Pembaruan Minggu 3
+## 🏛️ 1. Diagram Arsitektur C4 Container
 
-Pada penugasan **Minggu 03**, halaman web portofolio profil dari Minggu 02 direfaktorisasi secara menyeluruh menggunakan pustaka CSS **Bootstrap 5.3.3** dan **Bootstrap Icons** melalui Content Delivery Network (CDN), yang dipadukan dengan **Custom CSS Overrides** pada berkas `custom-style.css`.
+Arsitektur aplikasi pada Minggu 04 ditransformasi dari struktur HTML monolitik statis menjadi **Decoupled Multi-Tier Architecture** dengan **Dynamic Client-Side Rendering (CSR)**:
 
-Fokus utama pembaruan:
-1. **Pondasi Framework Modern**: Integrasi Bootstrap 5.3.3 CSS & JS Bundle beserta Bootstrap Icons tanpa menghilangkan struktur semantik HTML5 yang telah dibangun sebelumnya.
-2. **Navbar Responsif & Sticky**: Navigasi sticky yang mendukung menu *collapse/expand* dengan hamburger toggle di layar mobile.
-3. **Hero Section Elegan**: Banner visual full-width dengan kontras gelap (*Carbon Black*), status badge interaktif, tipografi tegas, dan 2 tombol *Call to Action* (CTA).
-4. **Refaktorisasi Kartu Profil**: Menggunakan komponen Bootstrap Card dan sistem 2 kolom grid yang adaptif di semua ukuran layar.
-5. **Transformasi Tabel ke Grid Kartu Proyek & Modal Dialog**: Menampilkan 4 kartu proyek interaktif dengan micro-interaction hover, badge stack teknologi, serta modal dialog detail terpisah untuk tiap proyek.
-6. **Formulir Interaktif Canggih**: Penggunaan Floating Labels, Input Group berikon, segmented toggle radio button, dan validasi visual client-side *real-time*.
-7. **Identitas Visual Personal "Rustic Charm"**: Overrides CSS murni berbasis variabel `:root` tanpa penggunaan `!important`, memastikan nol warna biru default Bootstrap yang tertinggal.
+```mermaid
+graph TD
+    subgraph Client ["Client Device / Web Browser (Presentation Tier)"]
+        UI["DOM View & Bootstrap Layout<br/>(index.html)"]
+        AppJS["Presentation Layer<br/>(js/app.js)"]
+        ApiJS["Data Access Layer<br/>(js/api-service.js)"]
+        Storage[("Client Storage<br/>(localStorage: 'orders')")]
+    end
+
+    subgraph CDNServer ["Content Delivery Network (CDN)"]
+        CDN["jsDelivr CDN<br/>(Bootstrap 5.3 CSS/JS Bundle & Icons)"]
+    end
+
+    subgraph StaticHost ["Static Web Host (GitHub Pages)"]
+        StaticFiles["Static Core Assets<br/>(index.html, css/custom-style.css)"]
+        JSONData[("Data Providers (JSON Tier)<br/>data/projects.json<br/>data/services.json<br/>data/profile.json")]
+    end
+
+    subgraph MockAPI ["REST Simulation Engine (In-Memory)"]
+        OrderSim["Simulated Order Service<br/>(Promise + setTimeout Latency 1000ms)"]
+    end
+
+    %% Alur Relasi & Komunikasi Antar-Komponen
+    StaticFiles -.->|"1. Serve Static Assets"| UI
+    CDN -.->|"2. Serve Framework Styles & Scripts"| UI
+    UI -->|"3. User Interaction & Event Delegation"| AppJS
+    AppJS -->|"4. Invoke Data Fetch"| ApiJS
+    ApiJS -->|"5. HTTP GET (fetch async/await)"| JSONData
+    JSONData -->|"6. Return Raw JSON"| ApiJS
+    ApiJS -->|"7. Return Parsed Objects"| AppJS
+    AppJS -->|"8. escapeHTML() & Render Reactive DOM"| UI
+    AppJS <-->|"9. Persist & Read Order History"| Storage
+    AppJS -->|"10. Dispatch Service Order Payload"| ApiJS
+    ApiJS -->|"11. Transmit Payload"| OrderSim
+    OrderSim -->|"12. Resolve { success, orderId }"| ApiJS
+    ApiJS -->|"13. Return Order Status"| AppJS
+    AppJS -->|"14. Show Toast Feedback & Update Badge"| UI
+```
 
 ---
 
-## ⚖️ Tabel Komparasi: Sebelum vs Sesudah Integrasi Framework
+## 🧩 2. Narasi Separation of Concerns (SoC)
 
-| Aspek / Komponen | Sebelum (Minggu 02 - Pure HTML5 & CSS3) | Sesudah (Minggu 03 - Bootstrap 5.3 + Custom Overrides) |
+Arsitektur kode menerapkan prinsip **Separation of Concerns (SoC)** secara ketat melalui pembagian 3 lapisan utama:
+
+1. **Presentation Layer (`js/app.js`)**:
+   - Bertanggung jawab sepenuhnya atas manipulasi DOM, manajemen *state* lokal aplikasi (`projects`, `services`, `profile`, `activeFilter`, `orders`), *event delegation* terpusat, pengisian *Universal Modal*, pemfilteran kategori di memori, penanganan status UI (*Loading*, *Error*, *Empty State*), sanitasi input melalui `escapeHTML()`, dan umpan balik pengguna (*Toast notification* & badge navbar reaktif).
+   - Lapisan ini tidak melakukan pemanggilan `fetch()` langsung ke endpoint atau berkas, melainkan mendelegasikannya ke `ApiService`.
+
+2. **Data Access Layer (`js/api-service.js`)**:
+   - Bertindak sebagai gerbang komunikasi data (*Data Access Object / Service Abstraction*).
+   - Menyediakan metode asinkron (`getProjects()`, `getServices()`, `getProfile()`, `submitServiceOrder()`) dengan validasi `response.ok`, konversi JSON, penanganan kesalahan (*error re-throwing*), dan simulasi *latency* jaringan.
+   - Lapisan ini sama sekali tidak mengetahui struktur DOM maupun antarmuka pengguna.
+
+3. **Data Layer (`data/*.json`)**:
+   - Merupakan penyedia data murni (*Single Source of Truth*) yang terpisah dari struktur penyajian HTML.
+   - Terdiri dari `data/projects.json`, `data/services.json`, dan `data/profile.json`. Pemisahan ini memfasilitasi pemeliharaan data tanpa perlu menyentuh markup presentasi.
+
+---
+
+## ⚖️ 3. Tabel Komparasi: Sebelum vs Sesudah Refactoring (Week 3 vs Week 4)
+
+| Aspek / Komponen | Sebelum (Week 3 - Static Hardcoded Bootstrap) | Sesudah (Week 4 - Decoupled Dynamic CSR) |
 | :--- | :--- | :--- |
-| **Struktur & Layout** | CSS Flexbox & CSS Grid manual kaku dengan batas kontainer tetap (`max-width: 1000px`). | Sistem Grid Bootstrap 12-kolom responsif (`container`, `row`, `col-*`), `row-cols-*`, dan utility spacing terstandarisasi. |
-| **Header & Navigasi** | Header statis Flexbox dengan link horizontal sederhana tanpa hamburger menu di ponsel. | **Bootstrap Navbar Sticky** (`navbar-expand-lg sticky-top navbar-dark`) dengan **Hamburger Toggler** fungsional di layar kecil. |
-| **Hero Section** | Belum tersedia (halaman langsung dimulai dari kartu profil). | **Hero Section Full-Width** bertema gelap (*Carbon Black*), badge ketersediaan beranimasi *pulse*, tagline, dan 2 tombol CTA navigasi. |
-| **Section Tentang Saya** | Struktur manual div dua kolom dengan pembatas garis CSS murni. | **Bootstrap Card** (`card shadow-sm rounded-4`) dengan pembagian kolom grid (`col-lg-8` & `col-lg-4`) dan Badge Pills resmi. |
-| **Portofolio Karya** | Tabel statis HTML (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`) yang digulir horizontal pada mobile. | **Grid 4 Kartu Proyek** (`row-cols-1 row-cols-md-2 row-cols-lg-3 g-4`) + **4 Modal Dialog** interaktif terhubung untuk rincian pekerjaan. |
-| **Galeri Keahlian** | Dua artikel terpisah dalam CSS Grid statis. | Ditata ulang menjadi **List Group Numbered** Bootstrap di bawah grid kartu proyek dengan badge kategori keahlian. |
-| **Formulir Kontak** | Input form standar dengan label statis di atas kolom input. | **Floating Labels** (`form-floating`), **Input Group** berikon di kiri, **Toggle Button Group** (`btn-check`), dan **Real-Time Client Validation** (`was-validated`). |
-| **Styling & Theming** | Menggunakan CSS Reset manual dan variabel vanilla CSS di `style.css`. | Berkas `custom-style.css` yang melakukan **overrides spesifik tanpa `!important`** pada komponen Bootstrap, selaras dengan palet *Rustic Charm*. |
+| **Sumber Data** | Data proyek, profil, dan layanan ditulis keras (*hardcoded*) langsung di dalam berkas `index.html`. | Terpisah penuh di `data/projects.json`, `data/services.json`, dan `data/profile.json` (*Data Decoupling*). |
+| **Siklus Hidup Rendering** | Statis murni; seluruh elemen kartu dan teks dibuat saat berkas HTML pertama kali dibaca browser. | **Client-Side Rendering (CSR)** dinamis dengan dukungan **Loading State** (spinner), **Error State** (alert + tombol coba lagi), dan **Empty State**. |
+| **Modal Dialog** | 4 elemen modal terpisah (`#modalCashflow`, `#modalTelegram`, dll.) yang menyebabkan redundansi DOM. | **1 Universal Modal** (`#universalProjectModal`) yang dikontrol secara dinamis via JavaScript dan *Event Delegation*. |
+| **Interaksi Formulir** | Pengiriman formulir tradisional yang memicu *page reload* penuh (`POST` bawaan form). | **Pengiriman REST Asinkron** via `fetch`/simulasi tanpa reload, dilengkapi *loading indicator* pada tombol submit dan notifikasi **Bootstrap Toast**. |
+| **Keamanan (Security)** | Tanpa sanitasi data; rentan terhadap injeksi Cross-Site Scripting (XSS). | Dilengkapi fungsi sanitasi **`escapeHTML()`**, penetapan judul via **`textContent`**, serta penerapan **Content Security Policy (CSP)** di `<head>`. |
+| **Penyimpanan Riwayat** | Tidak ada penyimpanan lokal; data formulir hilang setelah halaman ditutup atau di-refresh. | Persistensi ke **`localStorage`** dengan key `"orders"` serta sinkronisasi reaktif ke **badge navbar** secara otomatis. |
+| **Filter & Navigasi Data** | Tanpa fitur filter kategori proyek. | **Filter Kategori Dinamis** yang dihasilkan dari data unik proyek dan memfilter kartu instan langsung dari memori tanpa *re-fetch*. |
 
 ---
 
-## 🎨 Palet Warna "Rustic Charm" (Aturan 60-30-10)
+## 📊 4. Hasil Pengukuran Kinerja Browser DevTools (Tahap 6)
 
-| Proporsi | Peran Desain | Nama Warna | Kode HEX | Variabel CSS | Penerapan |
-| :---: | :--- | :--- | :---: | :--- | :--- |
-| **60%** | Dominan / Background | Floral White | `#FFFCF2` | `--color-bg` | Latar utama halaman web |
-| **60%** | Permukaan Komponen | Pure White | `#FFFFFF` | `--color-surface` | Kartu profil, kartu proyek, isi modal dialog |
-| **30%** | Teks Body Utama | Charcoal Brown | `#403D39` | `--color-text` | Teks paragraf, biografi, deskripsi proyek |
-| **30%** | Heading & Dark Accent | Carbon Black | `#252422` | `--color-heading` | Navbar, footer, modal-header, heading judul |
-| **30%** | Elemen Netral / Border | Silver Mist | `#CCC5B9` | `--color-border` | Garis tepi kartu, pemisah kolom, input form |
-| **10%** | Aksen Interaktif | Spicy Paprika | `#EB5E28` | `--color-accent` | Tombol CTA, hover link, badge sorotan, focus ring |
+Pengukuran metrik jaringan dilakukan menggunakan Google Chrome DevTools pada tab **Network** (dengan opsi throttling *Disable Cache* untuk Cold Load dan *Enable Cache* untuk Warm Load):
 
----
+| Metrik Kinerja | Cold Load (Cache Mati) | Warm Load (Cache Aktif) | Selisih / Penghematan |
+| :--- | :---: | :---: | :---: |
+| **Time to First Byte (TTFB)** | *(diisi manual)* | *(diisi manual)* | *(diisi manual)* |
+| **First Contentful Paint (FCP)** | *(diisi manual)* | *(diisi manual)* | *(diisi manual)* |
+| **Jumlah Request HTTP** | *(diisi manual)* | *(diisi manual)* | *(diisi manual)* |
+| **Total Transfer Size** | *(diisi manual)* | *(diisi manual)* | *(diisi manual)* |
+| **Status Cache File JSON** | 200 OK (Transfer Jaringan) | 200 / 304 (from disk/memory cache) | *(diisi manual)* |
 
-## 📸 Dokumentasi & Pratinjau Tampilan (Screenshots)
+### Tangkapan Layar Analisis Waterfall DevTools:
 
-> *Tambahkan tangkapan layar antarmuka halaman web pada placeholder di bawah ini setelah dideploy:*
+> *Placeholder tangkapan layar waterfall dari tab Network DevTools:*
 
-| Tampilan Desktop (>= 1200px) | Tampilan Mobile (< 576px) |
+| Cold Load Network Waterfall | Warm Load Network Waterfall |
 | :---: | :---: |
-| ![Pratinjau Desktop](https://via.placeholder.com/600x350/252422/FFFCF2?text=Screenshot+Desktop+View) | ![Pratinjau Mobile](https://via.placeholder.com/300x550/252422/FFFCF2?text=Screenshot+Mobile+View) |
-
-| Modal Dialog Proyek Interaktif | Validasi Formulir Client-Side |
-| :---: | :---: |
-| ![Pratinjau Modal](https://via.placeholder.com/450x300/403D39/FFFCF2?text=Screenshot+Modal+Dialog) | ![Pratinjau Validasi Form](https://via.placeholder.com/450x300/EB5E28/FFFCF2?text=Screenshot+Form+Validation) |
+| ![Cold Load Waterfall](https://via.placeholder.com/600x320/252422/FFFCF2?text=Screenshot+Cold+Load+Waterfall) | ![Warm Load Waterfall](https://via.placeholder.com/600x320/252422/FFFCF2?text=Screenshot+Warm+Load+Waterfall) |
 
 ---
 
-## 📂 Struktur Berkas Proyek
+## ⚙️ 5. Catatan Pilihan Arsitektur `submitServiceOrder`
+
+Pada metode `ApiService.submitServiceOrder(payload)`, arsitektur menggunakan **Promise dengan simulasi `setTimeout` (1000ms latency)**, bukan mock API eksternal (seperti Mockoon, MockAPI, atau Reqres).
+
+**Rasionalisasi Pemilihan:**
+1. **Kompatibilitas Static Hosting**: GitHub Pages adalah penyedia *hosting* statis murni yang tidak mengizinkan penanganan *endpoint* HTTP POST di sisi peladen.
+2. **Kemandirian Lingkungan (Zero External Dependency)**: Menggunakan simulasi berbasis Promise internal memastikan aplikasi portofolio tetap dapat didemonstrasikan kapan saja tanpa ketergantungan pada kestabilan server pihak ketiga atau kuota request *mock provider* gratisan.
+3. **Replikasi Pengalaman Pengguna Nyata**: Waktu tunda 1000 milidetik mereplikasi jeda jaringan riil (*round-trip latency*), memungkinkan penguji mengamati *loading state* (tombol dinonaktifkan dengan spinner) sebelum umpan balik *Toast* dimunculkan.
+
+---
+
+## 📂 Struktur Berkas Proyek (Minggu 04)
 
 ```
 ppw-2026-week2-12S24003/
-├── index.html           # Berkas HTML5 utama dengan integrasi Bootstrap 5.3 CDN & semantik lengkap
-├── custom-style.css     # Berkas styling kustom (Overrides Bootstrap bertema Rustic Charm tanpa !important)
-├── style.css            # Berkas CSS Minggu 02 (diarsipkan / dikosongkan)
-├── README.md            # Dokumentasi lengkap proyek dan komparasi refaktorisasi
-└── .vscode/
-    └── settings.json    # Konfigurasi workspace editor
-```
-
----
-
-## 🚀 Panduan Menjalankan & Deployment
-
-### 1. Menjalankan di Komputer Lokal
-1. Pastikan berkas proyek berada pada direktori lokal.
-2. Buka berkas `index.html` menggunakan peramban web modern (Google Chrome, Mozilla Firefox, Microsoft Edge), atau gunakan ekstensi **Live Server** pada VS Code.
-
-### 2. Prosedur Commit & Deploy ke GitHub Pages
-Jalankan perintah berikut pada terminal Git:
-```bash
-# 1. Pastikan berada di branch week3-bootstrap
-git checkout -b week3-bootstrap
-
-# 2. Tambahkan perubahan dan lakukan commit
-git add .
-git commit -m "feat: refactor portofolio menggunakan Bootstrap 5.3 CDN dan Custom CSS Overrides"
-
-# 3. Push ke branch remote GitHub
-git push -u origin week3-bootstrap
-
-# 4. Aktivasi GitHub Pages:
-# - Buka repositori di GitHub -> Settings -> Pages
-# - Pada opsi 'Branch', pilih 'week3-bootstrap' dan folder '/ (root)'
-# - Klik 'Save' dan tunggu proses deployment selesai.
+├── index.html              # Antarmuka web utama dengan Universal Modal & CSP meta tag
+├── css/
+│   └── custom-style.css    # Desain tema Rustic Charm & overrides Bootstrap
+├── data/
+│   ├── projects.json       # Sumber data portofolio proyek
+│   ├── services.json       # Sumber data paket konsultasi & layanan
+│   └── profile.json        # Sumber data identitas, biografi, dan keahlian
+├── js/
+│   ├── api-service.js      # Lapisan Data Access (Fetch abstraction & mock order)
+│   └── app.js              # Lapisan Presentasi (DOM controller, CSR, modal, localStorage)
+└── README.md               # Dokumentasi arsitektur, komparasi, dan hasil pengujian
 ```
 
 ---
@@ -135,5 +167,4 @@ git push -u origin week3-bootstrap
 - **Program Studi** : S1 Sistem Informasi
 - **Mata Kuliah** : Pemrograman dan Pengujian Aplikasi Web (12S3101)
 - **Institusi** : Institut Teknologi Del
-- **Email Institusi** : [michael.nasution@del.ac.id](mailto:michael.nasution@del.ac.id)
 - **Tahun Akademik** : 2025/2026
