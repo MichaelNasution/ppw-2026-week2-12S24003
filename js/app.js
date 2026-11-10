@@ -674,7 +674,6 @@ const App = {
     setTxt('vitalProgram', p.program || p.prodi);
     setTxt('vitalInstitution', p.institusi);
     setTxt('vitalCohort', p.cohort || '2024');
-    setTxt('vitalGpa', p.gpa || '3.72 / 4.00');
     setTxt('vitalLocation', p.location || p.lokasi);
     setTxt('vitalStatus', p.status || 'Tersedia untuk Kolaborasi');
 
