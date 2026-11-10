@@ -1,32 +1,62 @@
 [
   {
-    "id": "s1",
-    "name": "Konsultasi Akademik / Teknis",
-    "price": "Mulai Rp200.000",
-    "features": [
-      "Diskusi teknis terarah",
-      "Review kode sumber (Code Review)",
-      "Saran arsitektur sistem"
-    ]
-  },
-  {
-    "id": "s2",
-    "name": "Kolaborasi Proyek Web",
-    "price": "Hubungi untuk penawaran",
-    "features": [
-      "Pengembangan fitur baru",
-      "Integrasi API eksternal",
-      "Deployment ke Cloud/Server"
-    ]
-  },
-  {
-    "id": "s3",
-    "name": "Full-stack Development Package",
+    "id": "fullstack",
+    "name": "Full-Stack Web Engineering & Aplikasi Kustom",
     "price": "Mulai Rp1.000.000",
+    "description": "Pengembangan aplikasi web end-to-end dengan arsitektur modern, responsif, dan terukur.",
+    "icon": "bi-layers-half",
     "features": [
-      "Pembuatan Frontend & Backend",
-      "Perancangan Database optimal",
-      "Testing & Optimization performa"
+      "Frontend Modern (React.js / Bootstrap 5 + Anime.js Motion)",
+      "Backend RESTful API (Laravel / Node.js)",
+      "Desain Skema Database Teroptimasi & Keamanan CSP"
+    ]
+  },
+  {
+    "id": "frontend",
+    "name": "UI/UX Refactoring & Interactive Motion Design",
+    "price": "Mulai Rp450.000",
+    "description": "Transformasi antarmuka kaku menjadi pengalaman web interaktif berstandar WCAG 2.2 AA.",
+    "icon": "bi-magic",
+    "features": [
+      "Audit Heuristik & Redesain Layout Modern",
+      "Animasi Mikro Interaktif menggunakan Anime.js",
+      "Optimasi Performa & Responsivitas Mobile-First"
+    ]
+  },
+  {
+    "id": "database",
+    "name": "Analisis Sistem, Pemodelan ERD/DFD & Basis Data",
+    "price": "Mulai Rp300.000",
+    "description": "Penyusunan spesifikasi kebutuhan sistem (SRS/SyRS), pemodelan proses, dan optimasi query SQL.",
+    "icon": "bi-database-check",
+    "features": [
+      "Dokumentasi SRS, Use Case, BPMN, DFD & ERD",
+      "Normalisasi Tabel & Optimasi Indexing MySQL",
+      "Konsultasi Arsitektur Sistem Informasi"
+    ]
+  },
+  {
+    "id": "automation",
+    "name": "Otomatisasi Sistem & Integrasi Bot Telegram",
+    "price": "Mulai Rp350.000",
+    "description": "Pembuatan bot notifikasi, pelaporan otomatis, dan integrasi webhook antar-layanan.",
+    "icon": "bi-robot",
+    "features": [
+      "Custom Command & Webhook Telegram Bot API",
+      "Sinkronisasi Laporan Otomatis dari Database",
+      "Penjadwalan Tugas Berkala (Cron Job)"
+    ]
+  },
+  {
+    "id": "konsultasi",
+    "name": "Konsultasi Akademik, Code Review & Pair Programming",
+    "price": "Mulai Rp150.000 / Sesi",
+    "description": "Diskusi teknis terarah, bedah kode sumber, dan pendampingan penyelesaian proyek.",
+    "icon": "bi-mortarboard",
+    "features": [
+      "Code Review & Refactoring Clean Architecture",
+      "Debugging & Penyelesaian Masalah Logika",
+      "Simulasi Pengujian & Dokumentasi Teknis"
     ]
   }
 ]

@@ -1,50 +1,90 @@
 [
   {
     "id": "p1",
-    "title": "Cashflow Website",
-    "description": "Aplikasi manajemen arus kas berbasis web untuk memudahkan pencatatan keuangan.",
-    "category": "Web",
-    "tags": ["React.js", "Node.js", "PHP", "MySQL"],
+    "title": "Cashflow Analytics Website",
+    "description": "Aplikasi manajemen arus kas berbasis web untuk pencatatan transaksi real-time, visualisasi grafik finansial bulanan, dan perencanaan alokasi anggaran otomatis.",
+    "category": "Web Development",
+    "course": "Pemrograman & Pengujian Aplikasi Web",
+    "role": "Lead Full-Stack Developer",
+    "tags": ["React.js", "Node.js", "PHP", "MySQL", "REST API"],
     "thumbnail": "bi-cash-coin",
+    "icon": "bi-cash-coin",
+    "image": "img/projects/cashflow-app.svg",
     "metrics": {
-      "year": 2025
+      "year": 2025,
+      "summary": "3 Modul Finansial, Visualisasi Grafik Real-Time, Latensi Query < 25ms"
     },
-    "link": "#"
+    "highlights": [
+      "Dashboard interaktif pemantauan pemasukan, pengeluaran, dan saldo bersih",
+      "Skema basis data relasional ternormalisasi (3NF) dengan indexing cepat",
+      "Ekspor laporan keuangan otomatis ke format CSV & ringkasan eksekutif"
+    ],
+    "link": "https://github.com/MichaelNasution"
   },
   {
     "id": "p2",
-    "title": "Bot Pelaporan Telegram",
-    "description": "Bot otomatis untuk mengelola pelaporan dan notifikasi secara terintegrasi via Telegram.",
-    "category": "Automation",
-    "tags": ["Node.js", "Telegram Bot API", "MySQL"],
+    "title": "Bot Pelaporan & Otomatisasi Telegram",
+    "description": "Mesin bot otomatis berbasis webhook untuk mengelola pelaporan aktivitas tim, pengingat tenggat akademik, dan distribusi rekap data secara real-time via Telegram.",
+    "category": "Automation & Bot",
+    "course": "Eksplorasi Mandiri & Otomatisasi Sistem",
+    "role": "Backend & Automation Engineer",
+    "tags": ["Node.js", "Telegram Bot API", "MySQL", "Webhook", "Cron"],
     "thumbnail": "bi-telegram",
+    "icon": "bi-telegram",
+    "image": "img/projects/telegram-bot.svg",
     "metrics": {
-      "year": 2025
+      "year": 2025,
+      "summary": "99.98% Uptime, Respon Rata-rata 120ms, Otomatisasi 100+ Notifikasi/Minggu"
     },
-    "link": "#"
+    "highlights": [
+      "Arsitektur event-driven asynchronous menggunakan Node.js & Telegram Webhook",
+      "Integrasi langsung dengan cluster MySQL untuk rekapitulasi instan via perintah chat",
+      "Penjadwalan laporan berkala otomatis menggunakan cron worker"
+    ],
+    "link": "https://github.com/MichaelNasution"
   },
   {
     "id": "p3",
-    "title": "Kandidat Proyek GEMASTIK Web",
-    "description": "Proyek inovasi dan kompetisi di bidang pengembangan web untuk perlombaan GEMASTIK.",
-    "category": "Web",
-    "tags": ["PHP", "Laravel", "MySQL"],
+    "title": "Portal Inovasi — Seleksi GEMASTIK Web",
+    "description": "Platform kolaborasi dan eksibisi karya inovasi digital yang dirancang untuk seleksi kompetisi nasional GEMASTIK divisi Pengembangan Perangkat Lunak / Web.",
+    "category": "Web Development",
+    "course": "Kompetisi Nasional GEMASTIK — IT Del",
+    "role": "Full-Stack & UI/UX Architect",
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap 5", "WCAG AA"],
     "thumbnail": "bi-trophy",
+    "icon": "bi-trophy",
+    "image": "img/projects/gemastik-web.svg",
     "metrics": {
-      "year": 2025
+      "year": 2025,
+      "summary": "Skor Performa 98/100, Standar Aksesibilitas WCAG 2.2 AA, Arsitektur MVC"
     },
-    "link": "#"
+    "highlights": [
+      "Implementasi Role-Based Access Control (RBAC) dengan Laravel Middleware",
+      "Antarmuka inklusif berstandar WCAG 2.2 Level AA dengan navigasi keyboard penuh",
+      "Pencarian full-text instan dan manajemen repositori dokumen karya"
+    ],
+    "link": "https://github.com/MichaelNasution"
   },
   {
     "id": "p4",
-    "title": "Sistem Presensi & Lab",
-    "description": "Sistem informasi terintegrasi untuk absensi kehadiran dan manajemen operasional laboratorium.",
-    "category": "Web",
-    "tags": ["PHP", "MySQL", "Bootstrap 5", "JavaScript"],
+    "title": "Sistem Informasi Presensi & Operasional Lab",
+    "description": "Sistem terintegrasi untuk manajemen jadwal praktikum, pencatatan kehadiran mahasiswa secara real-time, serta pemantauan kesiapan perangkat workstation laboratorium.",
+    "category": "System & Database",
+    "course": "Analisis & Perancangan Sistem Informasi",
+    "role": "System Analyst & Database Designer",
+    "tags": ["PHP", "MySQL", "Bootstrap 5", "JavaScript", "ERD & DFD"],
     "thumbnail": "bi-building-check",
+    "icon": "bi-building-check",
+    "image": "img/projects/presensi-lab.svg",
     "metrics": {
-      "year": 2025
+      "year": 2026,
+      "summary": "3 Peran Pengguna (Admin, Asisten, Praktikan), Akurasi Log 100%"
     },
-    "link": "#"
+    "highlights": [
+      "Pemodelan sistem lengkap mencakup SyRS, Use Case Diagram, DFD, dan ERD",
+      "Dashboard pemantauan kuota dan status inventaris workstation laboratorium",
+      "Rekapitulasi persentase kehadiran otomatis untuk evaluasi nilai praktikum"
+    ],
+    "link": "https://github.com/MichaelNasution"
   }
 ]

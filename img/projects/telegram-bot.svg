@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#172026"/>
+      <stop offset="100%" stop-color="#252422"/>
+    </linearGradient>
+    <linearGradient id="tgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#EB5E28"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg2)"/>
+  <circle cx="680" cy="400" r="190" fill="#0EA5E9" opacity="0.1"/>
+  <circle cx="120" cy="90" r="150" fill="#EB5E28" opacity="0.12"/>
+  <!-- Architecture Pipeline Frame -->
+  <rect x="60" y="45" width="680" height="390" rx="16" fill="#1E1C1A" stroke="#403D39" stroke-width="2"/>
+  <rect x="60" y="45" width="680" height="42" rx="16" fill="#282623"/>
+  <circle cx="88" cy="66" r="6" fill="#EF4444"/>
+  <circle cx="108" cy="66" r="6" fill="#F59E0B"/>
+  <circle cx="128" cy="66" r="6" fill="#10B981"/>
+  <text x="400" y="70" fill="#CCC5B9" font-family="monospace" font-size="11" text-anchor="middle">bot-engine // webhook-dispatcher.service.js</text>
+
+  <!-- Left: Node.js Worker Terminal -->
+  <rect x="88" y="110" width="310" height="298" rx="12" fill="#141312" stroke="#33312E"/>
+  <text x="108" y="138" fill="#EB5E28" font-family="monospace" font-weight="bold" font-size="12">$ node bot-daemon.js --prod</text>
+  <text x="108" y="164" fill="#10B981" font-family="monospace" font-size="11">[OK] Connected to MySQL Cluster</text>
+  <text x="108" y="186" fill="#38BDF8" font-family="monospace" font-size="11">[INFO] Telegram Webhook Active</text>
+  <text x="108" y="214" fill="#CCC5B9" font-family="monospace" font-size="10">&gt; Incoming command: /laporan_harian</text>
+  <text x="108" y="234" fill="#CCC5B9" font-family="monospace" font-size="10">&gt; User: @michael_nasution (Verified)</text>
+  <text x="108" y="254" fill="#F59E0B" font-family="monospace" font-size="10">&gt; Querying 142 rows in 14ms...</text>
+  <text x="108" y="274" fill="#10B981" font-family="monospace" font-size="10">&gt; Dispatched PDF &amp; Summary [200 OK]</text>
+  <rect x="108" y="300" width="270" height="86" rx="8" fill="#1E1C1A" stroke="#403D39"/>
+  <text x="124" y="324" fill="#FFFCF2" font-family="sans-serif" font-weight="bold" font-size="11">Queue Throughput</text>
+  <text x="124" y="352" fill="#EB5E28" font-family="monospace" font-weight="bold" font-size="22">99.98% Uptime</text>
+  <text x="124" y="372" fill="#CCC5B9" font-family="monospace" font-size="10">Avg Latency: 120ms &bull; Cron Active</text>
+
+  <!-- Right: Telegram Chat Mockup -->
+  <rect x="422" y="110" width="290" height="298" rx="12" fill="#252422" stroke="#403D39"/>
+  <rect x="422" y="110" width="290" height="48" rx="12" fill="#2E2C29"/>
+  <circle cx="452" cy="134" r="14" fill="url(#tgGrad)"/>
+  <text x="452" y="138" fill="#FFF" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">BOT</text>
+  <text x="478" y="131" fill="#FFFCF2" font-family="sans-serif" font-weight="bold" font-size="12">Del Report Bot</text>
+  <text x="478" y="146" fill="#10B981" font-family="monospace" font-size="10">● bot aktif (automated)</text>
+
+  <!-- Chat Bubbles -->
+  <rect x="520" y="174" width="174" height="34" rx="10" fill="#EB5E28"/>
+  <text x="534" y="195" fill="#FFFFFF" font-family="monospace" font-size="11">/rekap_mingguan_tim</text>
+
+  <rect x="438" y="222" width="236" height="118" rx="10" fill="#1E1C1A" stroke="#403D39"/>
+  <text x="454" y="244" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="11">📊 Laporan Terintegrasi</text>
+  <text x="454" y="266" fill="#FFFCF2" font-family="monospace" font-size="10">• Tiket Selesai : 28 Tugas</text>
+  <text x="454" y="284" fill="#FFFCF2" font-family="monospace" font-size="10">• Pending Review: 3 Tugas</text>
+  <text x="454" y="302" fill="#10B981" font-family="monospace" font-size="10">• Status Server : Normal</text>
+  <rect x="454" y="312" width="204" height="18" rx="4" fill="#2E2C29"/>
+  <text x="556" y="324" fill="#FF8C5A" font-family="sans-serif" font-weight="bold" font-size="9" text-anchor="middle">Unduh Lampiran CSV</text>
+
+  <rect x="438" y="356" width="256" height="34" rx="17" fill="#141312" stroke="#33312E"/>
+  <text x="456" y="377" fill="#6B665F" font-family="sans-serif" font-size="11">Ketik perintah /help...</text>
+</svg>
+
