@@ -2,7 +2,6 @@
   {
     "id": "fullstack",
     "name": "Full-Stack Web Engineering & Aplikasi Kustom",
-    "price": "Mulai Rp1.000.000",
     "description": "Pengembangan aplikasi web end-to-end dengan arsitektur modern, responsif, dan terukur.",
     "icon": "bi-layers-half",
     "features": [
@@ -14,7 +13,6 @@
   {
     "id": "frontend",
     "name": "UI/UX Refactoring & Interactive Motion Design",
-    "price": "Mulai Rp450.000",
     "description": "Transformasi antarmuka kaku menjadi pengalaman web interaktif berstandar WCAG 2.2 AA.",
     "icon": "bi-magic",
     "features": [
@@ -26,7 +24,6 @@
   {
     "id": "database",
     "name": "Analisis Sistem, Pemodelan ERD/DFD & Basis Data",
-    "price": "Mulai Rp300.000",
     "description": "Penyusunan spesifikasi kebutuhan sistem (SRS/SyRS), pemodelan proses, dan optimasi query SQL.",
     "icon": "bi-database-check",
     "features": [
@@ -38,7 +35,6 @@
   {
     "id": "automation",
     "name": "Otomatisasi Sistem & Integrasi Bot Telegram",
-    "price": "Mulai Rp350.000",
     "description": "Pembuatan bot notifikasi, pelaporan otomatis, dan integrasi webhook antar-layanan.",
     "icon": "bi-robot",
     "features": [
@@ -50,7 +46,6 @@
   {
     "id": "konsultasi",
     "name": "Konsultasi Akademik, Code Review & Pair Programming",
-    "price": "Mulai Rp150.000 / Sesi",
     "description": "Diskusi teknis terarah, bedah kode sumber, dan pendampingan penyelesaian proyek.",
     "icon": "bi-mortarboard",
     "features": [

@@ -4,6 +4,10 @@
       <stop offset="0%" stop-color="#191D1A"/>
       <stop offset="100%" stop-color="#252422"/>
     </linearGradient>
+    <linearGradient id="statusGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
   </defs>
   <rect width="800" height="480" fill="url(#bg4)"/>
   <circle cx="670" cy="110" r="170" fill="#10B981" opacity="0.1"/>
@@ -13,6 +17,7 @@
   <circle cx="88" cy="66" r="6" fill="#EF4444"/>
   <circle cx="108" cy="66" r="6" fill="#F59E0B"/>
   <circle cx="128" cy="66" r="6" fill="#10B981"/>
+  <rect x="200" y="56" width="400" height="20" rx="10" fill="#1E1C1A"/>
   <text x="400" y="70" fill="#CCC5B9" font-family="monospace" font-size="11" text-anchor="middle">lab-management.del.ac.id // attendance-matrix</text>
 
   <!-- Sidebar -->
@@ -35,26 +40,25 @@
 
   <!-- Table Rows -->
   <rect x="288" y="158" width="400" height="36" rx="6" fill="#252422"/>
-  <text x="304" y="180" fill="#FFFCF2" font-family="monospace" font-size="11">12S24003 &bull; Michael Nasution</text>
+  <text x="304" y="180" fill="#FFFCF2" font-family="monospace" font-size="11">12S24003 &#8226; Michael Nasution</text>
   <rect x="606" y="166" width="68" height="20" rx="10" fill="#10B981" opacity="0.2"/>
   <text x="640" y="180" fill="#10B981" font-family="monospace" font-size="10" text-anchor="middle">HADIR</text>
 
   <rect x="288" y="204" width="400" height="36" rx="6" fill="#252422"/>
-  <text x="304" y="226" fill="#FFFCF2" font-family="monospace" font-size="11">12S24011 &bull;Sesi Praktikum PPW</text>
+  <text x="304" y="226" fill="#FFFCF2" font-family="monospace" font-size="11">12S24011 &#8226; Sesi Praktikum PPW</text>
   <rect x="606" y="212" width="68" height="20" rx="10" fill="#10B981" opacity="0.2"/>
   <text x="640" y="226" fill="#10B981" font-family="monospace" font-size="10" text-anchor="middle">HADIR</text>
 
   <rect x="288" y="250" width="400" height="36" rx="6" fill="#252422"/>
-  <text x="304" y="272" fill="#FFFCF2" font-family="monospace" font-size="11">12S24018 &bull; Sesi Basis Data</text>
+  <text x="304" y="272" fill="#FFFCF2" font-family="monospace" font-size="11">12S24018 &#8226; Sesi Basis Data</text>
   <rect x="606" y="258" width="68" height="20" rx="10" fill="#F59E0B" opacity="0.2"/>
   <text x="640" y="272" fill="#F59E0B" font-family="monospace" font-size="10" text-anchor="middle">IZIN</text>
 
   <rect x="288" y="296" width="400" height="36" rx="6" fill="#252422"/>
-  <text x="304" y="318" fill="#FFFCF2" font-family="monospace" font-size="11">12S24025 &bull; Sesi Algoritma</text>
+  <text x="304" y="318" fill="#FFFCF2" font-family="monospace" font-size="11">12S24025 &#8226; Sesi Algoritma</text>
   <rect x="606" y="304" width="68" height="20" rx="10" fill="#10B981" opacity="0.2"/>
   <text x="640" y="318" fill="#10B981" font-family="monospace" font-size="10" text-anchor="middle">HADIR</text>
 
   <!-- Summary Footer -->
-  <text x="288" y="378" fill="#CCC5B9" font-family="monospace" font-size="10">Terintegrasi QR-Checkin &bull; Export Rekapan PDF/XLSX</text>
+  <text x="288" y="378" fill="#CCC5B9" font-family="monospace" font-size="10">Terintegrasi QR-Checkin &#8226; Export Rekapan PDF/XLSX</text>
 </svg>
-

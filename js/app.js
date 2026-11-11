@@ -736,8 +736,7 @@ const App = {
     const optionsHTML = this.state.services.map((srv) => {
       const safeId = this.escapeHTML(srv.id);
       const safeName = this.escapeHTML(srv.name);
-      const safePrice = srv.price ? ` (${this.escapeHTML(srv.price)})` : '';
-      return `<option value="${safeId}">${safeName}${safePrice}</option>`;
+      return `<option value="${safeId}">${safeName}</option>`;
     }).join('');
 
     selectEl.innerHTML = `
@@ -758,15 +757,13 @@ const App = {
     if (!srv) return;
 
     const nameEl = document.getElementById('previewServiceName');
-    const priceEl = document.getElementById('previewServicePrice');
     const descEl = document.getElementById('previewServiceDesc');
     const iconEl = document.getElementById('previewServiceIcon');
     const featEl = document.getElementById('previewServiceFeatures');
 
     if (nameEl) nameEl.textContent = srv.name;
-    if (priceEl) priceEl.textContent = srv.price || 'Hubungi untuk Penawaran';
     if (descEl) descEl.textContent = srv.description || 'Layanan konsultasi dan pengembangan solusi perangkat lunak terarah.';
-    if (iconEl) iconEl.className = `bi ${srv.icon || 'bi-layers-half'}`;
+    if (iconEl) iconEl.className = `bi ${srv.icon || 'bi-layers-half'} text-accent me-2`;
 
     if (featEl && Array.isArray(srv.features)) {
       featEl.innerHTML = srv.features.map(f =>
